@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dosis:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@500&family=Dosis:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@500&family=Dosis:wght@400;700&family=Kavivanar&display=swap');
+:root {
+    --primaryColor : #1BBCB6;
+    --seconderyColor:#252F48 ;
+    --treetycolor : #A9C3B8;
+  }
+  *  { box-sizing: border-box;
+  }
+
+  body {
+    width: 960px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--seconderyColor) ;
+     padding: 5px ;
+     align-items: center;
+     color: white;
+} 
+
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+
+}
+header nav ul li {
+    margin-left: 15px; 
+    
+}
+header img {
+    width: 100px;
+    height: 50px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+section {
+    margin: 10px 0; 
+    
+    
+}
+.slider img  {
+    width: 900px;
+    height: 500px;
+}
+.intro {
+    width: 500px;
+    
+}
+.intro h1 {
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.intro p {
+    text-indent:30px;
+}
+.total {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: var(--treetycolor);
+    border-radius: 10px;
+    height: 150px;
+    text-align: center;
+}
+
+.total div h2 {
+    margin-bottom: 10px;
+}
+
+section.stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px; 
+}
+
+.stories div {
+    width: 300px;
+}
+
+ .stories div img {
+     width: 100%;
+     margin-bottom: 10px;
+ }
+
+footer {
+    width: 100%;
+    background-color: var(--seconderyColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    color: white;
+}
+
+footer img {
+    width: 30px;
+    height: 30px; 
+}
+
+footer a:nth-child(4) img {
+    border-radius: 50%;
+}
+ 
+/* list page :*/
+
+/* pet page */
+
+/* hotel page */
+
+/* donation page */
+
+/* about us */
+  
