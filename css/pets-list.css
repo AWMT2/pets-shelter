@@ -61,51 +61,52 @@ section {
     margin: 10px 0;
     width: 960px;
 }
-.slider img  {
-    width: 960px;
-    height: 560px;
-}
-.intro {
-    width: 500px;
-    
-}
-.intro h1 {
-    text-align: center;
-    font-weight: 900;
-    margin-bottom: 10px;
-}
-
-.statistics {
+/* styling pet-list.html */
+#filter{
+    width: 300px;
+    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 960px;
-    background-color: var(--treetycolor);
-    border-radius: 10px;
-    height: 150px;
-    text-align: center;
+    border-radius: 5px;
+    margin: 20px 0;
+    background-color: lightslategray;
 }
-
-.statistics div h2 {
-    margin-bottom: 10px;
-}
-
-section.stories {
+section.catsPhoto {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px; 
+    gap: 20px;
+    align-items: center;
+}
+section.catsPhoto img {
+    width: 280px;
+    height: 220px;
 }
 
-.stories div {
-    width: 300px;
+section.dogsPhoto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;  
 }
 
- .stories div img {
-     width: 100%;
-     margin-bottom: 10px;
- }
+section.dogsPhoto img {
+    width: 280px;
+    height: 220px;
+}
 
- footer {
+section.otherPhoto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+section.otherPhoto img {
+    width: 280px;
+    height: 220px;
+}
+
+
+footer {
     width: 100%;
     background-color: var(--seconderyColor);
  }
@@ -175,15 +176,3 @@ footer a {
 .fa-youtube:hover {
     background-color: #e64a41;
 }
- 
-/* list page :*/
-
-
-/* pet page */
-
-/* hotel page */
-
-/* donation page */
-
-/* about us */
-  
