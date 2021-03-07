@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dosis:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@500&family=Dosis:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@500&family=Dosis:wght@400;700&family=Kavivanar&display=swap');
@@ -10,8 +9,10 @@
     --seconderyColor:#252F48 ;
     --treetycolor : #A9C3B8;
   }
-  *  { box-sizing: border-box;
-  }
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     width: 100%;
@@ -59,54 +60,129 @@ main {
     flex-direction: column;
 }
 section {
-    margin: 10px 0;
+    margin: 10px 0; 
     width: 960px;
 }
-.slider img  {
+
+section.hotel-main-image img {
     width: 960px;
     height: 560px;
-}
-.intro {
-    width: 500px;
-    
-}
-.intro h1 {
-    text-align: center;
-    font-weight: 900;
-    margin-bottom: 10px;
+    display: none;
 }
 
-.statistics {
+section.hotel-main-image img:first-child {
+    display: block;
+}
+
+section.about-hotel {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    width: 960px;
-    background-color: var(--treetycolor);
+    padding: 0 15px;
+}
+
+section.about-hotel h1 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.hotel-form .form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     border-radius: 10px;
-    height: 150px;
-    text-align: center;
+    background-color: var(--treetycolor);
+    padding: 20px;
 }
 
-.statistics div h2 {
-    margin-bottom: 10px;
+.hotel-form .form-container h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 15px;
 }
 
-section.stories {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px; 
+.hotel-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.stories div {
-    width: 300px;
+.hotel-form form .input-container{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
 }
 
- .stories div img {
-     width: 100%;
-     margin-bottom: 10px;
- }
+.hotel-form .input-container .input-label {
+    margin-bottom: 7px;
+    font-size: 15px;
+}
 
- footer {
+.hotel-form .input-container input {
+    border-radius: 5px;
+    height: 30px;
+}
+
+.hotel-form .input-container select {
+    border-radius: 5px;
+    height: 30px;
+}
+
+.hotel-form .input-container textarea {
+    max-height: 250px;
+    max-width: 100%;
+    min-width: 100%;
+    border-radius: 5px;
+}
+
+.hotel-form input[type="submit"] {
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+section.reservation-list {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(82, 236, 146);
+}
+
+
+section.reservation-list h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+section.reservation-list table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+section.reservation-list table th {
+    padding: 8px;
+    text-align: left;
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+  }
+
+section.reservation-list table td {
+    padding: 8px;
+    text-align: left;
+}
+
+a#cancel {
+    color: red;
+}
+
+section.reservation-list table tr:nth-child(2) td {
+    padding-top: 20px;
+}
+
+footer {
     width: 100%;
     background-color: var(--seconderyColor);
  }
