@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dosis:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@500&family=Dosis:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@500&family=Dosis:wght@400;700&family=Kavivanar&display=swap');
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+:root {
+    --primaryColor : #1BBCB6;
+    --seconderyColor:#252F48 ;
+    --treetycolor : #A9C3B8;
+  }
+  *  { box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.7;
+}
+
+header {
+    width: 100%;
+    background-color: var(--seconderyColor) ;
+}
+
+header div {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px ;
+    align-items: center;
+    color: white;
+} 
+
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+
+}
+header nav ul li {
+    margin-left: 15px; 
+    
+}
+header img {
+    width: 100px;
+    height: 50px;
+}
+
+main {
+    width: 100%;
+     display: flex;
+    align-items: center;
+     flex-direction: column; 
+}
+main div img {
+    margin-top: 20px;
+    align-items: center;
+}
+
+main div button {
+    margin-bottom: 20px;
+}
+
+main div p {
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    width: 100%;
+    background-color: var(--seconderyColor);
+ }
+
+footer .footer-container {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    color: white;
+}
+
+footer a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: var(--seconderyColor);
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: var(--seconderyColor);
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-rss {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: var(--seconderyColor);
+}
+.fa-rss:hover {
+    background-color: #eb8231;
+}
+.fa-youtube {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: var(--seconderyColor);
+}
+.fa-youtube:hover {
+    background-color: #e64a41;
+}
