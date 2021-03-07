@@ -1,5 +1,4 @@
-# pets-shelter
-
+# pet-shelter
 ## Wireframes for the project
 
 ### Home Page
@@ -25,3 +24,4 @@
 ### About us Page
 
 ![About us Page wireframe](wireframes/aboutus.jpeg)
+
