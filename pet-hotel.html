@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/pet-hotel.css">
+    <title>Pet Hotel</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="https://via.placeholder.com/100x50?text=LOGO" alt="logo">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Adoption</li>
+                    <li>Pet Hotel</li>
+                    <li>Donation</li>
+                    <li>About us</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hotel-main-image">
+            <img class="imageSlider" src="https://via.placeholder.com/960x560?text=SLIDER" alt="slider">
+            <img class="imageSlider" src="https://via.placeholder.com/960x560?text=SLIDER2" alt="slider">
+            <img class="imageSlider" src="https://via.placeholder.com/960x560?text=SLIDER3" alt="slider">
+        </section>
+        <section class="about-hotel">
+            <h1>Pet's Hotel</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere alias, dignissimos dolores porro suscipit fugit molestiae sequi et culpa, asperiores voluptatum, magnam necessitatibus repellat ad vitae maiores. Placeat doloremque debitis porro qui eius deleniti sit amet veritatis sunt, provident, quia sapiente, magnam a itaque? Architecto libero, in sit itaque placeat accusantium quod hic. Odit dolore ducimus soluta consequuntur id dicta ad sequi enim, perferendis officiis repellendus ipsa, vitae nesciunt. Quos omnis expedita quibusdam quisquam modi nihil laudantium beatae numquam officiis quod tenetur sint, magnam veniam commodi, aliquam ratione accusantium saepe, provident consequatur quas eos? Quibusdam mollitia non sint neque delectus?</p>
+        </section>
+        <section class="hotel-form">
+            <div class="form-container">
+                <h2>Book Now</h2>
+                <form id="hotel-form" >
+                    <div class="input-container">
+                        <label for="name" class="input-label">Name</label>
+                        <input id="name" type="text" name="name" required/>
+                    </div>
+                    <div class="input-container">
+                        <label for="phone" class="input-label">Phone Number</label>
+                        <input id="phone" type="number" maxlength="10" name="phone" required/>
+                    </div>
+                    <div class="input-container">
+                        <label for="pets-type" class="input-label">Pet's Type</label>
+                        <select name = "select-type" id="pets-type">
+                            <option value="cat">Cat</option>
+                            <option value="dog">Dog</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-container">
+                        <label for="comment" class="input-label">Comments</label>
+                        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                    </div>
+                    <input type="submit" value="Book">
+                </form>
+            </div>
+        </section>
+        <section class="reservation-list">
+            <h2>Reservations</h2>
+            <table id="reservation-table">
+                <tr>
+                    <th>Date</th>
+                    <th>Pet's Type</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>12/05/2021</td>
+                    <td>Cat</td>
+                    <td><a id="cancel" href="#">Cancel</a></td>
+                </tr>
+                <tr>
+                    <td>15/05/2021</td>
+                    <td>Dog</td>
+                    <td><a id="cancel" href="#">Cancel</a></td>
+                </tr>
+                <tr>
+                    <td>15/05/2021</td>
+                    <td>Dog</td>
+                    <td>-----------</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div>
+                all copy rights reserved &copy; 2021
+            </div>
+            <div class="social-icons">
+                <a href="#">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-rss"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/app.js"></script>
+    <script src="/js/pet-hotel.js"></script>
+</body>
+</html>
