@@ -6,13 +6,15 @@ carousel();
 function carousel() {
   let i;
   let x = document.getElementsByClassName('imageSlider');
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
+  if(x.length > 0){
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = 'none';
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1;}
+    x[slideIndex-1].style.display = 'block';
+    setTimeout(carousel, 2000);
   }
-  slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1}
-  x[slideIndex-1].style.display = 'block';
-  setTimeout(carousel, 2000);
 }
 
 
@@ -30,7 +32,7 @@ const Pet = function Pet(name, age, type, image1, description, image2='', image3
   this.image2 = image2;
   this.image3 = image3;
   this.description = description;
-  this.allPets.push(this);
+  Pet.allPets.push(this);
 };
 
 Pet.allPets = [];
@@ -90,17 +92,17 @@ function getDonations () {
 const Book = function Book(name, phoneNumber, pitType, date, comment='') {
   this.name = name;
   this.phoneNumber = phoneNumber;
-  this.pitType = pitType;
+  this.petType = pitType;
   this.date = date;
   this.comment = comment;
 };
 
 function saveBooks(booksArray) {
-  localStorage.setItem('books', booksArray);
+  localStorage.setItem('books', JSON.stringify(booksArray));
 }
 
 function getBooks () {
-  return JSON.parse(localStorage.getItem('donations'));
+  return JSON.parse(localStorage.getItem('books'));
 }
 
 
