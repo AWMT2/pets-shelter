@@ -1,23 +1,24 @@
 // slider
 
-// let slideIndex = 0;
-// carousel();
+let slideIndex = 0;
+carousel();
 
-// function carousel() {
-//   let i;
-//   let x = document.getElementsByClassName('imageSlider');
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = 'none';
-//   }
-//   slideIndex++;
-//   if (slideIndex > x.length) {slideIndex = 1}
-//   x[slideIndex-1].style.display = 'block';
-//   setTimeout(carousel, 2000);
-// }
-
+function carousel() {
+  let i;
+  let x = document.getElementsByClassName('imageSlider');
+  if(x.length > 0){
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = 'none';
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1;}
+    x[slideIndex-1].style.display = 'block';
+    setTimeout(carousel, 2000);
+  }
+}
 
 const roomsCapacity = 50;
-const totalDonation = 1350;
+let totalDonation = 1350;
 const totalPetsHelped = 773;
 
 
@@ -126,3 +127,13 @@ function generatePetsObjects() {
 
 // initialization
 generatePetsObjects();
+
+
+function updateDonationParagraph() {
+  let totalDonationParagraph= document.getElementById ('total-donations');
+  if (localStorage.getItem ('donations')){
+    totalDonationParagraph.textContent = '';
+    totalDonationParagraph.textContent = localStorage.getItem ('updateTotalDonation');
+  }
+}
+updateDonationParagraph();
