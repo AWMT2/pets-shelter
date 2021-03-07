@@ -1,20 +1,21 @@
 // slider
 
-// let slideIndex = 0;
-// carousel();
+let slideIndex = 0;
+carousel();
 
-// function carousel() {
-//   let i;
-//   let x = document.getElementsByClassName('imageSlider');
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = 'none';
-//   }
-//   slideIndex++;
-//   if (slideIndex > x.length) {slideIndex = 1}
-//   x[slideIndex-1].style.display = 'block';
-//   setTimeout(carousel, 2000);
-// }
-
+function carousel() {
+  let i;
+  let x = document.getElementsByClassName('imageSlider');
+  if(x.length > 0){
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = 'none';
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1;}
+    x[slideIndex-1].style.display = 'block';
+    setTimeout(carousel, 2000);
+  }
+}
 
 const roomsCapacity = 50;
 const totalDonation = 1350;
@@ -70,7 +71,7 @@ const Donation = function Donation(name, email, phoneNumber, amount, bankNumber,
   this.name = name;
   this.email = email;
   this.phoneNumber = phoneNumber;
-  this.address = amount;
+  this.amount = amount;
   this.cardHolder = bankNumber;
   this.expData = expData;
   this.cvv = cvv;
@@ -91,17 +92,17 @@ function getDonations () {
 const Book = function Book(name, phoneNumber, pitType, date, comment='') {
   this.name = name;
   this.phoneNumber = phoneNumber;
-  this.pitType = pitType;
+  this.petType = pitType;
   this.date = date;
   this.comment = comment;
 };
 
 function saveBooks(booksArray) {
-  localStorage.setItem('books', booksArray);
+  localStorage.setItem('books', JSON.stringify(booksArray));
 }
 
 function getBooks () {
-  return JSON.parse(localStorage.getItem('donations'));
+  return JSON.parse(localStorage.getItem('books'));
 }
 
 

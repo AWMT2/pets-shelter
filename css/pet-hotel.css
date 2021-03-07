@@ -174,8 +174,9 @@ section.reservation-list table td {
     text-align: left;
 }
 
-a#cancel {
+a.cancel {
     color: red;
+    cursor: pointer;
 }
 
 section.reservation-list table tr:nth-child(2) td {
