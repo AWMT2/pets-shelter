@@ -17,7 +17,6 @@ function carousel() {
   }
 }
 
-
 const roomsCapacity = 50;
 const totalDonation = 1350;
 const totalPetsHelped = 773;
@@ -71,7 +70,7 @@ const Donation = function Donation(name, email, phoneNumber, amount, bankNumber,
   this.name = name;
   this.email = email;
   this.phoneNumber = phoneNumber;
-  this.address = amount;
+  this.amount = amount;
   this.cardHolder = bankNumber;
   this.expData = expData;
   this.cvv = cvv;
