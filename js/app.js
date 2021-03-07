@@ -23,7 +23,8 @@ const totalPetsHelped = 773;
 
 
 // Pet constuctor
-const Pet = function Pet(name, age, type, image1, description, image2='', image3='') {
+const Pet = function Pet(id, name, age, type, image1, description, image2='', image3='') {
+  this.id = id;
   this.name = name;
   this.age = age;
   this.type = type;
@@ -39,14 +40,14 @@ Pet.allPets = [];
 Pet.prototype.getPetsList = function (type='') {
   if(type){
     let list = [];
-    for (let i in this.allPets){
-      if(this.allPets[i].type === type){
-        list.push(this.allPets[i]);
+    for (let i in Pet.allPets){
+      if(Pet.allPets[i].type === type){
+        list.push(Pet.allPets[i]);
       }
     }
     return list;
   } else {
-    return this.allPets;
+    return Pet.allPets;
   }
 };
 
@@ -108,6 +109,7 @@ function getBooks () {
 function generatePetsObjects() {
   for(let i = 0; i < 20; i++){
     new Pet(
+      i,
       'name'+i,
       7,
       i%2 ? 'cat': 'dog',
@@ -117,6 +119,7 @@ function generatePetsObjects() {
   }
 
   new Pet(
+    20,
     'name other',
     7,
     'other',

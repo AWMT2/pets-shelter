@@ -72,38 +72,17 @@ section {
     margin: 20px 0;
     background-color: lightslategray;
 }
-section.catsPhoto {
+#cardsContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     align-items: center;
 }
-section.catsPhoto img {
+#cardsContainer img {
     width: 280px;
     height: 220px;
 }
 
-section.dogsPhoto {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;  
-}
-
-section.dogsPhoto img {
-    width: 280px;
-    height: 220px;
-}
-
-section.otherPhoto {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-section.otherPhoto img {
-    width: 280px;
-    height: 220px;
-}
 
 
 footer {
