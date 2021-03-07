@@ -1,19 +1,19 @@
 // slider
 
-let slideIndex = 0;
-carousel();
+// let slideIndex = 0;
+// carousel();
 
-function carousel() {
-  let i;
-  let x = document.getElementsByClassName('imageSlider');
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
-  }
-  slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1}
-  x[slideIndex-1].style.display = 'block';
-  setTimeout(carousel, 2000);
-}
+// function carousel() {
+//   let i;
+//   let x = document.getElementsByClassName('imageSlider');
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = 'none';
+//   }
+//   slideIndex++;
+//   if (slideIndex > x.length) {slideIndex = 1}
+//   x[slideIndex-1].style.display = 'block';
+//   setTimeout(carousel, 2000);
+// }
 
 
 const roomsCapacity = 50;
@@ -30,7 +30,7 @@ const Pet = function Pet(name, age, type, image1, description, image2='', image3
   this.image2 = image2;
   this.image3 = image3;
   this.description = description;
-  this.allPets.push(this);
+  Pet.allPets.push(this);
 };
 
 Pet.allPets = [];
@@ -69,7 +69,7 @@ const Donation = function Donation(name, email, phoneNumber, amount, bankNumber,
   this.name = name;
   this.email = email;
   this.phoneNumber = phoneNumber;
-  this.address = amount;
+  this.amount = amount;
   this.cardHolder = bankNumber;
   this.expData = expData;
   this.cvv = cvv;

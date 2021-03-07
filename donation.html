@@ -46,20 +46,20 @@
                     <section class="basicInfoSec">
                     <legend>Donate To Support Our Cause </legend>
                     <label for="donorName">your Name :</label><br>
-                    <input type="text" id="donorName" name="donorName" value="please Enter Your full name" onclick= "this.value=''"><br>
+                    <input type="text" id="donorName" name="donorName" placeholder="please Enter Your full name" required ><br>
                     <label for="emailAddress">Email address :</label><br>
-                    <input type="text" id="emailAddress" name="emailAddress" value="please Enter Your E-mail" onclick= "this.value=''"><br>
+                    <input type="text" id="emailAddress" name="emailAddress" placeholder="please Enter Your E-mail" required ><br>
                     <label for="phoneNumber">Phone Number :</label><br>
-                    <input type="number" id="phoneNumber" name="phoneNumber" value="please Enter Your Phone Number"><br>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="please Enter 10 digit number"  pattern="[0-9]{10}"> <br>
                     </section>
                     <section class="paymentAmountSec">
                     <legend> Choose Payment Amount </legend>
-                    <button class="25">25 $</button>
-                    <button class="50">50 $</button><br>
-                    <button class="100">100 $</button>
-                    <button class="150">150 $</button>
+                    <button class="25"id= "25">25 $</button>
+                    <button class="50" id="50">50 $</button><br>
+                    <button class="100" id="100">100 $</button>
+                    <button class="150" id="150">150 $</button>
                     <label for="otherAmount">other amount</label>
-                    <input type="number" id="otherAmount" name="otherAmount" >
+                    <input type="number" id="otherAmount" name="otherAmount" required >
                     <label for="otherAmount">$</label><br>
                     </section>
                     <section class="payment">
