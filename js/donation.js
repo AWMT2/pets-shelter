@@ -180,14 +180,15 @@ let donationDataArray = getDonations () || [];
 // let expDate = document.getElementById ('expDate');
 // let cvv = document.getElementById ('cvv');
 let totalDonationsAmount = 0;
+let donationAmount;
 function totalDonations() {
   for (let i = 0 ; i < donationDataArray.length ; i++){
-    let donationAmount = donationDataArray[i].amount;
+    donationAmount = donationDataArray[i].amount;
     totalDonationsAmount = totalDonationsAmount + parseInt( donationAmount) ;
 
   }
   console.log (totalDonationsAmount);
-  return totalDonationsAmount;
+  return totalDonationsAmount , donationAmount ;
 }
 totalDonations ();
 
@@ -208,13 +209,13 @@ form.addEventListener('submit', function(event) {
 
   donationDataArray.push (saveDon);
   saveDonations (donationDataArray);
-  
+
 
   totalDonationsAmount+= parseInt (otherAmount);
-  console.log (totalDonationsAmount);
-  totalDonation = totalDonation+ totalDonationsAmount;
-  return totalDonationsAmount;
-
+  totalDonation = totalDonation+ parseInt(otherAmount);
+  console.log (totalDonation);
+  localStorage.setItem ('updateTotalDonation', totalDonation);
+  return totalDonationsAmount, totalDonation , otherAmount;
 });
 addDonation();
 function addDonation() {

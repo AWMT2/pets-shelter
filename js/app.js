@@ -18,7 +18,7 @@ function carousel() {
 }
 
 const roomsCapacity = 50;
-const totalDonation = 1350;
+let totalDonation = 1350;
 const totalPetsHelped = 773;
 
 
@@ -130,3 +130,13 @@ function generatePetsObjects() {
 
 // initialization
 generatePetsObjects();
+
+
+function updateDonationParagraph() {
+  let totalDonationParagraph= document.getElementById ('total-donations');
+  if (localStorage.getItem ('donations')){
+    totalDonationParagraph.textContent = '';
+    totalDonationParagraph.textContent = localStorage.getItem ('updateTotalDonation');
+  }
+}
+updateDonationParagraph();
