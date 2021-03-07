@@ -208,12 +208,13 @@ form.addEventListener('submit', function(event) {
 
   donationDataArray.push (saveDon);
   saveDonations (donationDataArray);
-  console.log(donationDataArray);
+  
 
   totalDonationsAmount+= parseInt (otherAmount);
   console.log (totalDonationsAmount);
+  totalDonation = totalDonation+ totalDonationsAmount;
+  return totalDonationsAmount;
 
- 
 });
 addDonation();
 function addDonation() {

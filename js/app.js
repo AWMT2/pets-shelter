@@ -16,9 +16,9 @@
 // }
 
 
-// const roomsCapacity = 50;
-// const totalDonation = 1350;
-// const totalPetsHelped = 773;
+const roomsCapacity = 50;
+const totalDonation = 1350;
+const totalPetsHelped = 773;
 
 
 // Pet constuctor
