@@ -1,19 +1,19 @@
 // slider
 
-let slideIndex = 0;
-carousel();
+// let slideIndex = 0;
+// carousel();
 
-function carousel() {
-  let i;
-  let x = document.getElementsByClassName('imageSlider');
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
-  }
-  slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1}
-  x[slideIndex-1].style.display = 'block';
-  setTimeout(carousel, 2000);
-}
+// function carousel() {
+//   let i;
+//   let x = document.getElementsByClassName('imageSlider');
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = 'none';
+//   }
+//   slideIndex++;
+//   if (slideIndex > x.length) {slideIndex = 1}
+//   x[slideIndex-1].style.display = 'block';
+//   setTimeout(carousel, 2000);
+// }
 
 
 const roomsCapacity = 50;
@@ -22,7 +22,8 @@ const totalPetsHelped = 773;
 
 
 // Pet constuctor
-const Pet = function Pet(name, age, type, image1, description, image2='', image3='') {
+const Pet = function Pet(id, name, age, type, image1, description, image2='', image3='') {
+  this.id = id;
   this.name = name;
   this.age = age;
   this.type = type;
@@ -30,7 +31,7 @@ const Pet = function Pet(name, age, type, image1, description, image2='', image3
   this.image2 = image2;
   this.image3 = image3;
   this.description = description;
-  this.allPets.push(this);
+  Pet.allPets.push(this);
 };
 
 Pet.allPets = [];
@@ -38,14 +39,14 @@ Pet.allPets = [];
 Pet.prototype.getPetsList = function (type='') {
   if(type){
     let list = [];
-    for (let i in this.allPets){
-      if(this.allPets[i].type === type){
-        list.push(this.allPets[i]);
+    for (let i in Pet.allPets){
+      if(Pet.allPets[i].type === type){
+        list.push(Pet.allPets[i]);
       }
     }
     return list;
   } else {
-    return this.allPets;
+    return Pet.allPets;
   }
 };
 
@@ -107,6 +108,7 @@ function getBooks () {
 function generatePetsObjects() {
   for(let i = 0; i < 20; i++){
     new Pet(
+      i,
       'name'+i,
       7,
       i%2 ? 'cat': 'dog',
@@ -116,6 +118,7 @@ function generatePetsObjects() {
   }
 
   new Pet(
+    20,
     'name other',
     7,
     'other',
