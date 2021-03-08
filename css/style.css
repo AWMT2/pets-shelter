@@ -111,8 +111,6 @@ transition: all 1s ease;
   }
 
   .nava:hover {
-    /* box-shadow: inset 0 0 0 5px var(--primaryColor);
-    -webkit-filter: brightness(100%); */
     color: var(--primaryColor);
 
   }
