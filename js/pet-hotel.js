@@ -8,7 +8,6 @@ tableContentElement.addEventListener('click', handleClick);
 
 function handleClick(event) {
   let targetElement = event.target;
-  console.log(targetElement.tagName);
   if(targetElement.tagName === 'A'){
     let id = targetElement.id;
     reservations.splice(id, 1);
@@ -25,7 +24,7 @@ function handleSubmit(event) {
   let petType = formEl.select_type.value;
   let date = formEl.date.value;
   let comment = formEl.comment.value;
-  let newBook = new Book(name, phone, petType, new Date(date), comment);
+  let newBook = new Book(name, phone, petType, date, comment);
   reservations.push(newBook);
   saveBooks(reservations);
   renderTable();
