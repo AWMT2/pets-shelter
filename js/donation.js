@@ -19,7 +19,15 @@ closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowOnClick);
 
 ///////////////////////////////////////////////////////////////////////////////
-
+let video = document.getElementById('myVideo');
+function myFunction() {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
+myFunction ();
 // ---------------------------form --------------------------------------------//
 const form = document.getElementById ('userDonationInput');
 const credit = document.getElementById ('credit');
@@ -138,7 +146,11 @@ leaveMessage.addEventListener('click', function(event) {
   messageBox.setAttribute ('placeholder','share your thoughts , stories or suggestions to us ');
   const messageSection = document.getElementById ('message');
   messageSection.appendChild (messageBox);
-});
+  
+
+},
+{ once: true }
+);
 
 
 //-----------------------------constructor------------------------------------//
