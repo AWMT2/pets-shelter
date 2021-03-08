@@ -6,18 +6,12 @@ cardsContainer.addEventListener('click', handleClick);
 function handleClick(event) {
   let targetElement = event.target;
   if(targetElement.nodeName === 'IMG'){
-    //GET THE PET OBJECT
     let object = Pet.allPets.filter(function (petObject) {
       return petObject.id == targetElement.id;
     });
-
-
-    //SAVE PET IN LOCAL STORAGE (selectedPet)
-
     localStorage.setItem( 'selectedPet', JSON.stringify(object));
 
   }
-  // REDIRECT WINDOW TO PET PAGE (/pet-page)
   window.location.href = '/pet.html' ;
 }
 
