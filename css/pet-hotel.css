@@ -85,10 +85,16 @@ section {
     width: 960px;
 }
 
+.hotel-main-image {
+    margin-top: 0 ;
+}
+
 section.hotel-main-image img {
     width: 960px;
     height: 560px;
     display: none;
+    object-fit: cover;
+    
 }
 
 section.hotel-main-image img:first-child {
@@ -100,6 +106,11 @@ section.about-hotel {
     flex-direction: column;
     align-items: center;
     padding: 0 15px;
+}
+
+section.about-hotel p {
+    font-family: 'open sans',akaya Telivigala;
+    font-size: 20px;
 }
 
 section.about-hotel h1 {
