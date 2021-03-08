@@ -9,6 +9,9 @@
     <title>Donations</title>
 </head>
 <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="/assets/img/videos/v1.mp4" type="video/mp4">
+    </video>
     <header>
         <div>
             <img src="https://via.placeholder.com/100x50?text=LOGO" alt="logo">
@@ -24,6 +27,7 @@
         </div>
     </header>
     <main>
+        <section class="white">
         <h1 class="h1donation">.. Ways To Give .. </h1>
         <section class="donation1">
             <h2 class="h2donation">Donate to the shelter and Help Animals</h2>
@@ -38,10 +42,10 @@
                 <img src="/assets/img/pop.jpg" alt="popup">
             </div>
         </div>
-
+        </section>
 
         <section class="formForDonation">
-            <form id="userDonationInput">
+            <form id="userDonationInput" class="form-style-5">
                 <fieldset>
                     <section class="basicInfoSec">
                     <legend>Donate To Support Our Cause </legend>
@@ -55,19 +59,21 @@
                     <section class="paymentAmountSec">
                     <legend> Choose Payment Amount </legend>
                     <button class="25"id= "25">25 $</button>
-                    <button class="50" id="50">50 $</button><br>
+                    <button class="50" id="50">50 $</button>
                     <button class="100" id="100">100 $</button>
                     <button class="150" id="150">150 $</button>
-                    <label for="otherAmount">other amount</label>
+                    <label for="otherAmount">other amount $</label>
                     <input type="number" id="otherAmount" name="otherAmount" required >
-                    <label for="otherAmount">$</label><br>
+                    <br>
                     </section>
                     <section class="payment">
                     <legend> Choose Payment Method </legend>
+                    <div class="gridSec">
                     <input type="radio" id="credit" name="payment" value="credit" >
+                    
                     <label for="credit">Credit-Card</label>
                     <input type="radio" id="bank" name="payment" value="bank">
-                    <label for="bank">Bank</label><br>
+                    <label for="bank">Bank</label><br></div>
                     <section id="paymentMethodInformation"></section><br>
                     </section>
                     <button class="leavemessage" id="leavemessage">Leave us a message </button>

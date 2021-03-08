@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dosis:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@500&family=Dosis:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@500&family=Dosis:wght@400;700&family=Kavivanar&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
 :root {
     --primaryColor : #1BBCB6;
     --seconderyColor:#252F48 ;
@@ -28,9 +28,14 @@ header {
     background-color: var(--seconderyColor) ;
 }
 
-
+.logotext {
+    font-family: 'Amarante', cursive;
+    font-size: 30px;
+    margin-left: -650px;
+    color: white;
+}
 header div {
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -65,14 +70,14 @@ main {
 }
 section {
     margin: 10px 0;
-    width: 960px;
+    width: 100%;
 }
 .slider img  {
-    width: 960px;
+    width: 1366px;
     height: 560px;
 }
 .intro {
-    width: 500px;
+    width: 700px;
     
 }
 .active {
@@ -123,18 +128,18 @@ transition: all 1s ease;
     color: var(--primaryColor);
   /* background: -webkit-linear-gradient(45deg, rgba(37,47,72,1) 11%, rgba(27,188,182,1) 100%); */
   text-shadow: 0px 11px 10px rgba(2, 2, 2, 0.171);
-  
+  font-family: 'Indie Flower', cursive;
   
 }
 .dash {
-    width: 960px;
+    width: 1100px;
     height: 5px;
     background-color: var(--seconderyColor);
     
 }
 
 .intro p {
-    font-size: 20px;
+    font-size: 29px;
     color : var(--seconderyColor);
     text-align: center;
 }
@@ -170,10 +175,13 @@ box-shadow: 0px 10px 13px -7px #000000, -1px 8px 25px 11px rgba(0,0,0,0);
 
 section.stories {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 30% 30% 30%;
+    margin-left: 120px;
      
 }
-
+.storiesContainer {
+    width: 100%;
+}
 .stories div {
     width: 300px;
     margin-bottom: 20px;
@@ -227,6 +235,8 @@ section.stories {
     color: white;
     transform: rotateY(180deg);
     padding :10px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
   }
   .storyh2 {
     text-align: center;
@@ -235,6 +245,7 @@ section.stories {
     font-size: 40px;
     color: var(--primaryColor);
     text-shadow: 0px 11px 10px rgba(2, 2, 2, 0.171);
+    font-family: 'Indie Flower', cursive;
 }
 
 
@@ -247,7 +258,7 @@ section.stories {
  }
 
 footer .footer-container {
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
