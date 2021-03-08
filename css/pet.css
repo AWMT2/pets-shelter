@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dosis:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@500&family=Dosis:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@500&family=Dosis:wght@400;700&family=Kavivanar&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
 
 :root {
     --primaryColor : #1BBCB6;
@@ -28,8 +29,18 @@ header {
     background-color: var(--seconderyColor) ;
 }
 
-header div {
-    width: 960px;
+.logo_container {
+    display: flex;
+    align-items: center;
+}
+
+.logotext {
+    font-family: 'Amarante', cursive;
+    font-size: 30px;
+    color: white;
+}
+header .header_container {
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -46,7 +57,8 @@ header nav ul {
 
 }
 header nav ul li {
-    margin-left: 15px; 
+    margin-left: 15px;
+    text-decoration: none; 
     
 }
 header img {
