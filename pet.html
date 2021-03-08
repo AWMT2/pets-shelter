@@ -13,7 +13,7 @@
 <body>
     <header>
         <div>
-            <img src="https://via.placeholder.com/100x50?text=LOGO" alt="logo">
+            <img src="/images/pet-care-logo-mascot-template_190190-163.jpg" alt="logo">
             <nav>
                 <ul>
                     <li><a href="index.html" class="nava">Home</a></li>
@@ -29,7 +29,7 @@
         <div class="modal">
             <div class="modal-content">
                 <span class="close-button">&times;</span>
-                <p>Your adoption request successfully sent, we will call you soon to get you the pet? </p>
+                <p>Your adoption request successfully sent, we will call you soon to get you the pet. </p>
                 <img src="/assets/img/Thanks.jpg" alt="popup">
             </div>
         </div>
@@ -38,29 +38,48 @@
             <div class="pet_info">
                 <p> Name : <span id="name">Pet Name</span></p>
                 <p> Age : <span id="age">5</span></p>
-                <p>Description :<span id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sapiente tempora magni consequuntur ducimus esse ratione autem, eligendi ad, provident numquam quis aliquid fugiat nemo, earum accusamus! Aliquam, nemo est?</span></p>
+                <p>Description : <span id="description"></span></p>
                 <button id="adopt_now" type="button">Adobt Now </button>
             </div>
         </section>
+        <hr>
 
-        <section class="form_section">
+        <h3>Start you adoption journey</h3>
+        <section class="adopt-journey">
+            <div>
+                <img src="/images/search-logo.png" alt="adopt-logo">
+                <h4>Search</h4>
+                 <p>It's easy to find a dog or cat who's right for you at a shelter or rescue group. Simply click on the pet you would like to adopt it.</p>   
+            </div>
+            <div>
+                <img src="/images/meet-logo.png" alt="">
+                <h5>Meet</h5>
+                <p>Once you find a pet, click on "Adopt Now" button apove , then fill contact info , and also you can Contact them to learn more about how to meet and adopt the pet.</p>
+            </div>
+            <div>
+                <img src="/images/adopt-logo.png" alt="">
+                <h6>Adopt</h6>
+                <p>The rescue or shelter will walk you through their adoption process. Prepare your home for the arrival of your dog or cat to help them adjust to their new family.</p>
+            </div>
+        </section>
+        <section style="display: none;" class="form_section">
             <h2>Adopt Now</h2>
             <form id="adopting">
                 <div class="input-container">
                     <label for="name" class="input-label">Name</label>
-                    <input id="name" type="text" name="name" required/>
+                    <input id="name" type="text" name="name" required />
                 </div>
                 <div class="input-container">
                     <label for="phone" class="input-label">Phone Number</label>
-                    <input id="phone" type="tel" maxlength="10" name="phone" required/>
+                    <input id="phone" type="number" maxlength="10" name="phone" required />
                 </div>
                 <div class="input-container">
                     <label for="address" class="input-label">Address</label>
-                    <input type="text" name="address" id="addres" >
+                    <input type="text" name="address" id="addres" required>
                 </div>
-                <input type="submit" value="Adopt">
+                <input id="submitBtn" type="submit" value="Adopt">
             </form>
-            
+
         </section>
     </main>
     <footer>
