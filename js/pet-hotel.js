@@ -1,3 +1,4 @@
+'use strict';
 let reservations = getBooks() || [];
 
 const formElement = document.getElementById('hotel-form');

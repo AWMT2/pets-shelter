@@ -26,57 +26,42 @@
         </div>
     </header>
     <main>
-        <div>
-            <img src="https://via.placeholder.com/300x300" alt="">
-        
-            <p> Name : </p>
-            <p> Age : </p>
-            <p>Description :</p>
-        <button type="button">Adobt Now </button>
-    </div>
-
-        <div>
-            <form action="adopting"></form>
-            <fieldset>
-                <legend> Form </legend>
-                <tr>
-                    <td>
-                        <label for=""></label>
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                </tr>
-                <br>
-                <tr>
-                    <td>
-                        <label for=""></label>
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                </tr>
-                <br>
-                <tr>
-                    <td>
-                        <label for=""></label>
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                </tr>
-                <br>
-                <td>
-                    <label for=""></label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-                </tr>
-
-            </fieldset>
-            <button type="submit"> Submit </button>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <p>Your adoption request successfully sent, we will call you soon to get you the pet? </p>
+                <img src="/assets/img/Thanks.jpg" alt="popup">
+            </div>
         </div>
+        <section class="pet_container">
+            <img id="pet_image" src="https://via.placeholder.com/300x300" alt="">
+            <div class="pet_info">
+                <p> Name : <span id="name">Pet Name</span></p>
+                <p> Age : <span id="age">5</span></p>
+                <p>Description :<span id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sapiente tempora magni consequuntur ducimus esse ratione autem, eligendi ad, provident numquam quis aliquid fugiat nemo, earum accusamus! Aliquam, nemo est?</span></p>
+                <button id="adopt_now" type="button">Adobt Now </button>
+            </div>
+        </section>
+
+        <section class="form_section">
+            <h2>Adopt Now</h2>
+            <form id="adopting">
+                <div class="input-container">
+                    <label for="name" class="input-label">Name</label>
+                    <input id="name" type="text" name="name" required/>
+                </div>
+                <div class="input-container">
+                    <label for="phone" class="input-label">Phone Number</label>
+                    <input id="phone" type="tel" maxlength="10" name="phone" required/>
+                </div>
+                <div class="input-container">
+                    <label for="address" class="input-label">Address</label>
+                    <input type="text" name="address" id="addres" >
+                </div>
+                <input type="submit" value="Adopt">
+            </form>
+            
+        </section>
     </main>
     <footer>
         <div class="footer-container">
@@ -99,6 +84,8 @@
             </div>
         </div>
     </footer>
+    <script src="/js/app.js"></script>
+    <script src="/js/pet.js"></script>
 </body>
 
 </html>

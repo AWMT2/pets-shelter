@@ -18,7 +18,7 @@ function carousel() {
 }
 
 const roomsCapacity = 50;
-let totalDonation = 1350;
+const totalDonation = 1350;
 const totalPetsHelped = 773;
 
 
@@ -62,6 +62,10 @@ const Adoption = function Adoption(name, phoneNumber, address, pet) {
 
 function saveAdoptions (adoptionsArray) {
   localStorage.setItem('adoptions', JSON.stringify(adoptionsArray));
+}
+
+function getAdoptions () {
+  return JSON.parse(localStorage.getItem('adoptions'));
 }
 
 

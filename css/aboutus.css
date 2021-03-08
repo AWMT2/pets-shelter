@@ -18,6 +18,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex: 1;
 }
 
 body {
@@ -26,6 +27,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 section {
     margin: 10px 0;
