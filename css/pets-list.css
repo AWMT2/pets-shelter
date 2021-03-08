@@ -18,6 +18,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     line-height: 1.7;
+   
 }
 
 header {
@@ -63,27 +64,50 @@ section {
 }
 /* styling pet-list.html */
 #filter{
-    width: 300px;
-    height: 100px;
+    width: 100%;
+    height: 80px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-radius: 5px;
     margin: 20px 0;
-    background-color: lightslategray;
+    background-color: lightgray;
+    box-shadow: 0 0 5px 5px gray;
+    padding-left: 10px;
+    
 }
-#cardsContainer {
+#filter input {
+    margin-left: 50px;
+    border-radius: 3px;
+    width: 100px;
+
+}
+select {
+    width: 100px;
+}
+
+input:hover{
+    background-color: gray;
+}
+
+#cardsContainer { 
+    
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr  ;
     gap: 20px;
-    align-items: center;
+    
 }
 #cardsContainer img {
     width: 280px;
     height: 220px;
+    box-shadow: -5px -5px 10px 5px gray, 5px 3px 5px 3px rgb(77, 157, 182);
+    border-radius: 5px;
+    
 }
 
-
+#cardsContainer img:hover {
+        cursor: pointer;
+      }
 
 footer {
     width: 100%;
