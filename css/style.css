@@ -18,12 +18,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     width: 100%;
     background-color: var(--seconderyColor) ;
 }
+
 
 header div {
     width: 960px;
@@ -43,7 +47,8 @@ header nav ul {
 
 }
 header nav ul li {
-    margin-left: 15px; 
+    margin-left: 15px;
+    text-decoration: none; 
     
 }
 header img {
@@ -56,6 +61,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex: 1;
 }
 section {
     margin: 10px 0;
@@ -69,23 +75,95 @@ section {
     width: 500px;
     
 }
+.active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .imageSlider {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    margin-top: -10px;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  .nava {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      height: 100%;
+      -webkit-filter: brightness(100%);
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+-ms-transition: all 1s ease;
+transition: all 1s ease;
+  }
+
+  .nava:hover {
+    color: var(--primaryColor);
+
+  }
+
 .intro h1 {
     text-align: center;
     font-weight: 900;
     margin-bottom: 10px;
+    font-size: 40px;
+    color: var(--primaryColor);
+  /* background: -webkit-linear-gradient(45deg, rgba(37,47,72,1) 11%, rgba(27,188,182,1) 100%); */
+  text-shadow: 0px 11px 10px rgba(2, 2, 2, 0.171);
+  
+  
+}
+.dash {
+    width: 960px;
+    height: 5px;
+    background-color: var(--seconderyColor);
+    
+}
+
+.intro p {
+    font-size: 20px;
+    color : var(--seconderyColor);
+    text-align: center;
 }
 
 .statistics {
+    background: var(--seconderyColor);
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 960px;
-    background-color: var(--treetycolor);
     border-radius: 10px;
-    height: 150px;
+    height: 200px;
     text-align: center;
+    padding :20px 0px;
+    margin:10px ;
 }
-
+.statistics :nth-child(2){
+    color : (var(--primaryColor));
+}
+.statistics div {
+    background-color: white;
+    padding: 30px ;
+    border-radius: 10px;
+    padding : 20px 60px;
+    
+    font-size: 25px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, -1px 8px 25px 11px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, -1px 8px 25px 11px rgba(0,0,0,0);
+}
 .statistics div h2 {
     margin-bottom: 10px;
 }
@@ -93,19 +171,77 @@ section {
 section.stories {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px; 
+     
 }
 
 .stories div {
     width: 300px;
+    margin-bottom: 20px;
 }
 
  .stories div img {
-     width: 100%;
+     width: 300px;
+     height: 300px;
      margin-bottom: 10px;
+     -webkit-box-shadow: 10px 7px 16px -4px rgba(0,0,0,0.63); 
+     box-shadow: 10px 7px 16px -4px rgba(0,0,0,0.63);
  }
+ .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: var(--seconderyColor);
+    color: white;
+    transform: rotateY(180deg);
+    padding :10px;
+  }
+  .storyh2 {
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: var(--primaryColor);
+    text-shadow: 0px 11px 10px rgba(2, 2, 2, 0.171);
+}
+
+
 
  footer {
+     margin-top: 20px;
+     margin-bottom: -20px;
     width: 100%;
     background-color: var(--seconderyColor);
  }
