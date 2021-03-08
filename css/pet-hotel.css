@@ -20,6 +20,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -58,6 +61,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex: 1;
 }
 section {
     margin: 10px 0; 

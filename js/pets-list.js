@@ -18,7 +18,7 @@ function handleClick(event) {
 
   }
   // REDIRECT WINDOW TO PET PAGE (/pet-page)
-  window.location.href = '/pet-page' ;
+  window.location.href = '/pet.html' ;
 }
 
 
