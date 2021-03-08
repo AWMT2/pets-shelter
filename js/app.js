@@ -18,7 +18,7 @@ function carousel() {
 }
 
 const roomsCapacity = 50;
-const totalDonation = 1350;
+let totalDonation = 1350;
 const totalPetsHelped = 773;
 
 
