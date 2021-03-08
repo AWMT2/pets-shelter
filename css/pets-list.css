@@ -122,6 +122,7 @@ input:hover{
     height: 220px;
     box-shadow: -5px -5px 10px 5px gray, 5px 3px 5px 3px rgb(77, 157, 182);
     border-radius: 5px;
+    object-fit: cover;
     
 }
 
