@@ -5,11 +5,14 @@ let adoptionsArray = getAdoptions() || [];
 
 function toggleModal() {
   if(modal.classList.length > 1){
-    let submitBtnEl = document.getElementById('submitBtn');
     let adoptBtn = document.getElementById('adopt_now');
-    submitBtnEl.setAttribute('disabled', 'disabled');
-    adoptBtn.setAttribute('disabled', 'disabled');
+    let paragraph = document.createElement('p');
+    paragraph.textContent = 'Already Adopted';
+    paragraph.setAttribute('class' , 'paragraph-adopted');
+    adoptBtn.parentNode.appendChild(paragraph);
+    adoptBtn.style.display = 'none';
     formSection.style.display = 'none';
+    window.scrollTo(document.body.scrollHeight, 0);
   }
   modal.classList.toggle('show-modal');
 }
