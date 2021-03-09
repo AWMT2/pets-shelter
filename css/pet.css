@@ -166,37 +166,51 @@ section {
 .pet_container {
     display: flex;
     justify-content: space-around;
+    margin: 50px;
 }
 
 .pet_info {
     width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+span#name {
+    font-size: 20px;
+}
+
+span#age {
+    font-size: 20px;
 }
 
 .pet_info p {
     margin: 20px 0;
     font-weight: 700;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'open sans',akaya Telivigala;
+    font-size: 21px;
 }
 
 .pet_info button {
-    margin-top: 100px;   
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 40px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: rgb(95, 91, 91);
 }
 
 .pet_info button:hover {
-    background-color: var(--primaryColor);
+    background-color: rgb(218, 214, 214);
+    transform: translateY(2px);
 }
 
 .pet_container img {
     height: 350px;
-    width: 350px;
-    margin-top: 20px;
-    margin-left: 20px;
-    position: relative;
-    animation-name: img;
-    animation-duration: 3s;  
-    animation-fill-mode: both;
+    width: 500px;
+    object-fit: cover;
+    margin-right: 20px;
+    -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.88); 
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.88);
 }
 
 @keyframes img {
