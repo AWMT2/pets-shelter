@@ -142,7 +142,6 @@ function generatePetsObjects() {
   new Pet(28, 'Bugz', 4 +' months', 'other','/assets/img/others/rabbit1.jpeg', 'Bugs is 4 months rabbit');
   new Pet(29, 'Cinna', 6 + ' months', 'other', '/assets/img/others/rabbit2.jpeg', 'Cinna is a cute rabit');
   new Pet(30,'Oreo', 5 +' months', 'other','/assets/img/others/rabbit3.jpeg', 'Oreo is a smart lovely rabiti' );
-    
 }
 
 
