@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/styledonation.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styledonation.css">
     <title>Donations</title>
 </head>
 <body>
     <video autoplay muted loop id="myVideo">
-      <source src="/assets/img/videos/v1.mp4" type="video/mp4">
+      <source src="./assets/img/videos/v1.mp4" type="video/mp4">
     </video>
     <header>
         <div class="header_container">
             <div class="logo_container">
-                <img src="/assets/img/logo.svg" alt="logo">
+                <img src="./assets/img/logo.svg" alt="logo">
                 <div class="logotext">Pets-shelter</div>
             </div>
             <nav>
@@ -42,7 +42,7 @@
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
                     <p>by donating to our shelter you contribute to saving the souls of these poor animals from homelessness and neglect  </p>
-                    <img src="/assets/img/pop.jpg" alt="popup">
+                    <img src="./assets/img/pop.jpg" alt="popup">
                 </div>
             </div>
         </section>
@@ -57,7 +57,7 @@
                     <label for="emailAddress">Email address :</label><br>
                     <input type="text" id="emailAddress" name="emailAddress" placeholder="please Enter Your E-mail" required ><br>
                     <label for="phoneNumber">Phone Number :</label><br>
-                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="please Enter 10 digit number"  pattern="[0-9]{10}"> <br>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="please Enter 10 digit number"  pattern="[0-9]{10}" maxlength="10"> <br>
                     </section>
                     <section class="paymentAmountSec">
                     <legend> Choose Payment Amount </legend>
@@ -72,14 +72,26 @@
                     <section class="payment">
                     <legend> Choose Payment Method </legend>
                     <div class="gridSec">
-                    <input type="radio" id="credit" name="payment" value="credit" >
+                    <!-- <input type="radio" id="credit" name="payment" value="credit" > -->
                     
-                    <label for="credit">Credit-Card</label>
-                    <input type="radio" id="bank" name="payment" value="bank">
-                    <label for="bank">Bank</label><br></div>
+                    <label for="credit">Credit-Card</label><br>
+                    <label for="bankNumber">Credit Card Number</label>
+                    <input type="number" id="bankNumber" name="bankNumber" onKeyPress="if(this.value.length==16) return false;"><br>
+
+                    <label for="CreditCode">Card Holder</label>
+                    <input type="text" id="CreditCode" name="CreditCode"><br>
+
+                    <label for="expDate">Expiration Date</label>
+                    <input type="date" id="expDate" name="expDate" ><br>
+
+                    <label for="cvv">CVV</label>
+                    <input type="number" id="cvv" name="cvv" maxlength="4" onKeyPress="if(this.value.length==4) return false;"><br>
+                </div>
                     <section id="paymentMethodInformation"></section><br>
                     </section>
-                    <section id="message"></section>
+                    <section id="message">
+                    <input type="text" id="messageBox" placeholder="share your thoughts , stories or suggestions to us ">
+                    </section>
                     <section class="resetAndSubmit">
                     <input type="reset" value="Reset"><br>
                     <input type="submit" value="Submit" class="submit">
@@ -89,7 +101,19 @@
                 </fieldset>
             </form>
         </section>
+         
     </main>
+    <div class="modal2" id="modal2" >
+        <div class="modal-dialog">
+            
+            
+            <div class="modal-content">
+                <span class="close-button2">&times;</span>
+                <p>Thank You For Donating , You Are A Great Help 🥳</p>
+                <img src="./assets/img/Thanks.jpg" alt="Thanks">
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="footer-container">
             <div>
@@ -111,7 +135,7 @@
             </div>
         </div>
     </footer>
-    <script src="/js/app.js"></script>   
-    <script src="/js/donation.js"></script>
+    <script src="./js/app.js"></script>   
+    <script src="./js/donation.js"></script>
 </body>
 </html>
