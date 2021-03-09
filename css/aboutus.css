@@ -33,7 +33,7 @@ body {
 }
 section {
     margin: 10px 0;
-    width: 960px;
+    width: 100%;
 }
 
 header {
@@ -66,6 +66,7 @@ header nav ul {
     display: flex;
     justify-content: space-between;
     margin-right: 10px;
+    list-style: none;
 
 }
 header nav ul li {
@@ -144,6 +145,7 @@ footer .footer-container {
     color: white;
 }
 
+
 footer a {
     font-size: 25px;
     color: white;
@@ -199,26 +201,182 @@ footer a {
     background-color: #e64a41;
 }
 .img {
-    height: 75px;
-    width: 75px;
+    height: 50%;
+    width: 100%;
     display: inline-block;
-    border-radius: 50%; 
+    border-radius: 50%;
+}
+.img-container
+{
+    height: 10%;
+    width: 70%;
+    left: 50px;
+    position: relative;
 }
  
 .teamCards{
     margin: auto;
 padding: 10px;
+display: flex; 
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
 }
-.info {
+.info h3 {
    
-    display: inline-block;
-    margin-left: 30px;
+    text-align: center;
+}
+.info
+{
+    border-top-width: 1px;
+    border-top-style: ridge;
 }
 .about
 {
-    margin-top: 5px;;
-      padding-bottom: 10px;
-      border-bottom-width:1px;
-      border-bottom-style: solid;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    border-bottom-width: 1px;
+    /* border-bottom-style: solid; */
+    width: 297px;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+    background-color: var(--first-color-lighten);
+    box-shadow: 4px 4px 16px #e1e1e1, -2px -2px 8px #fff;
+    border-radius: 2.5rem;
+    font-family: 'Dosis', sans-serif;
+    
 
 }
+.left
+{
+    float: left;
+    margin-left: 25px;
+}
+.right
+{
+    float: right;
+    margin-right: 25px;
+}
+
+body {
+
+  background-image: url('./assets/img/AboutUsEllements/backgrounndd.jpg');
+}
+
+body{
+    /* background-color:whitesmoke; */
+    
+            }
+           .animalImage{
+            height: 100%;
+        width: inherit;
+           }
+            .rowTow {
+                left: 172px;
+        position: relative;
+            }
+            .column {
+              float: left;
+              width: 33.3%;
+              margin-bottom: 16px;
+              padding: 0 8px;
+            }
+            
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              margin: 8px;
+            }
+            
+            .about-section {
+              padding: 50px;
+              text-align: center;
+              background-color: #474e5d;
+              color: white;
+            }
+            
+            .container {
+              padding: 0 16px;
+            }
+            .container h2{ font-weight: bold;}
+            
+            .container::after, .row::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+            
+            .title {
+              color: grey;
+            }
+            
+     
+            .zoom {
+       
+      transition: transform .1s; /* Animation */
+      
+    }
+    
+    .zoom:hover {
+      transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+    
+            @media screen and (max-width: 650px) {
+              .column {
+                width: 100%;
+                display: block;
+              }
+            }
+            .social {
+        text-align: justify;
+        padding: 0px;
+        font-size: 18px;
+        float: right;
+    }
+
+    
+    
+    .hero-image {
+      background-image: url('/assets/img/AboutUsEllements/cover6.jpg');
+      background-color: #cccccc;
+      height: 350px;
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    
+    .hero-text {
+      text-align: center;
+      position: absolute;
+      top: 38%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      color: white;
+      max-width: 55%;
+    }
+    .mission{
+        font-size: 50px;
+    }
+    .mainDiv{
+        display: inline; float:left; width: 75%;
+    }
+    .fullImage{
+        width:100%;
+    }
+    .linkedInIcon{
+        font-size:38px;color:rgb(19, 159, 224)
+    }
+    .githubIcon{
+        font-size:38px;color:black;
+    }
+    .facebookIcon{
+        font-size:38px;color:blue;
+    }
+
+    .para {
+        font-size: 21px;
+    }
+
+    

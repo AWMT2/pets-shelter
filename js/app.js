@@ -120,7 +120,7 @@ function generatePetsObjects() {
   new Pet(6, 'Walter', 4 + ' years','cat','/assets/img/cats/cat7.jpg','Walter is 4 years old, lazy; loves to eat and sleep' );
   new Pet(7, 'Flufy', 5+ ' months', 'cat','/assets/img/cats/cat8.jpg', 'Flufy is young acive, funny and playful, loves to hide under covers' );
   new Pet(8, 'Prince', 1 + ' year', 'cat', '/assets/img/cats/cat9.jpg','Prince is funny playful, but shy, you won\'t find him easily if there was a straner around' );
-  new Pet(9,'Ella', 6 + ' months', 'cat', '/assets/img/cats/cat9.jpg','Ella is a mix of Ragdol mom and Munchkin dad, most beautiful cat that you will ever meet');
+  new Pet(9,'Ella', 6 + ' months', 'cat', '/assets/img/cats/cat10.jpg','Ella is a mix of Ragdol mom and Munchkin dad, most beautiful cat that you will ever meet');
   new Pet(10,'Bo', 1+ + ' year', 'dog','/assets/img/dogs/dog1.jpg','bo is a little  cute dog, yet he is so intelligent');
   new Pet(11, 'Hank',7 + ' years','dog', '/assets/img/dogs/dog2.jpg','Hank is an old loyal dog, just feed him and he will be super loyal ' );
   new Pet(12, 'Rex', 2 + ' years','dog', '/assets/img/dogs/dog3.jpg', 'Rix is bloody intelligent, fast and loyal' );
