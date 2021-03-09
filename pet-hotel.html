@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/pet-hotel.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/pet-hotel.css">
     <title>Pet Hotel</title>
 </head>
 <body>
     <header>
         <div class="header_container">
             <div class="logo_container">
-                <img src="/assets/img/logo.svg" alt="logo">
+                <img src="./assets/img/logo.svg" alt="logo">
                 <div class="logotext">Pets-shelter</div>
             </div>
             <nav>
@@ -28,7 +28,7 @@
     </header>
     <main>
         <section class="hotel-main-image">
-            <img src="/assets/img/hotel-main-image.jpeg" alt="slider">
+            <img src="./assets/img/hotel-main-image.jpeg" alt="slider">
             <!-- <h1>Pet's Hotel</h1> -->
         </section>
         <section class="about-hotel">
@@ -38,14 +38,14 @@
         <section class="splitter">
             <div class="splitter_container">
                 <div class="splitter_card">
-                    <img src="/assets/img/27-24.jpg" alt="">
+                    <img src="./assets/img/27-24.jpg" alt="">
                     <div>
                        <h2>24/7 access</h2>
                         <p>Hotel is one of just a handful of pet hotels nationwide that offers you 24-hour access to your pet.</p> 
                     </div>
                 </div>
                 <div class="splitter_card">
-                    <img src="/assets/img/postHoliday.jpg" alt="">
+                    <img src="./assets/img/postHoliday.jpg" alt="">
                     <div>
                        <h2>year-round pampering</h2>
                         <p>Give your pet plenty of play and exercise when you drop them off for daycare.</p>
@@ -60,11 +60,11 @@
                 <form id="hotel-form" >
                     <div class="input-container">
                         <label for="name" class="input-label">Name</label>
-                        <input id="name" type="text" name="name" required/>
+                        <input placeholder="Your Full Name" id="name" type="text" name="name" required/>
                     </div>
                     <div class="input-container">
                         <label for="phone" class="input-label">Phone Number</label>
-                        <input id="phone" type="tel" maxlength="10" name="phone" required/>
+                        <input placeholder="Enter Ten Number" id="phone" type="tel" pattern="[0-9]{10}" maxlength="10" name="phone" required/>
                     </div>
                     <div class="input-container">
                         <label for="pets-type" class="input-label">Pet's Type</label>
@@ -115,7 +115,7 @@
             </div>
         </div>
     </footer>
-    <script src="/js/app.js"></script>
-    <script src="/js/pet-hotel.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/pet-hotel.js"></script>
 </body>
 </html>

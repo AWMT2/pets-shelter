@@ -10,6 +10,10 @@
     --seconderyColor:#252F48 ;
     --treetycolor : #A9C3B8;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
   *  { box-sizing: border-box;
   }
 
@@ -162,37 +166,52 @@ section {
 .pet_container {
     display: flex;
     justify-content: space-around;
+    margin: 50px;
 }
 
 .pet_info {
     width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+span#name {
+    font-size: 20px;
+}
+
+span#age {
+    font-size: 20px;
 }
 
 .pet_info p {
     margin: 20px 0;
     font-weight: 700;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'open sans',akaya Telivigala;
+    font-size: 21px;
 }
 
 .pet_info button {
-    margin-top: 100px;   
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 40px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: rgb(95, 91, 91);
 }
 
 .pet_info button:hover {
-    background-color: var(--primaryColor);
+    background-color: rgb(218, 214, 214);
+    transform: translateY(2px);
 }
 
 .pet_container img {
     height: 350px;
     width: 350px;
-    margin-top: 20px;
-    margin-left: 20px;
-    position: relative;
-    animation-name: img;
-    animation-duration: 3s;  
-    animation-fill-mode: both;
+    object-fit: cover;
+    margin-right: 20px;
+    -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.3); 
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.3);
+    border-radius: 50%;
 }
 
 @keyframes img {
@@ -250,7 +269,7 @@ section {
 
       main h3 {
           font-weight: 900;
-          color: plum;
+          color: rgb(212, 115, 212);
           font-size: x-large;
       }
 
@@ -258,6 +277,27 @@ section {
          font-family: 'open sans',akaya,telivagala;
          font-weight: 800;
          font-style: italic;
+     }
+
+     .paragraph-adopted {
+         color: var(--primaryColor);
+         border: 1px black solid;
+         width: fit-content;
+         padding: 10px;
+         border-radius: 5px;
+         font-weight: 900;
+         font-size: medium;
+     }
+
+      .card-class { 
+         display: flex;
+         width: 960px;
+         -webkit-box-shadow: 5px 5px 15px -2px #000000;
+        box-shadow: 5px 5px 15px -2px #000000;
+        height: 400px;
+        align-items: center;
+        padding: 20px;
+        justify-content: space-between;
      }
 
 
@@ -295,6 +335,7 @@ form .input-container{
 .input-container .input-label {
     margin-bottom: 7px;
     font-size: 17px;
+    font-family: 'open sans',akaya Telivigala;
 }
 
 .input-container input {

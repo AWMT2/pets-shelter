@@ -13,7 +13,7 @@ function carousel() {
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1;}
     x[slideIndex-1].style.display = 'block';
-    setTimeout(carousel, 2500);
+    setTimeout(carousel, 3500);
   }
 }
 
@@ -111,6 +111,7 @@ function getBooks () {
 
 
 function generatePetsObjects() {
+
   new Pet(0,'Bella', 1 +' year','cat', '/assets/img/cats/cat1.jpg','Bella is one year old cat,dominant, good rat hunter and super lovely when she is hungry');
   new Pet(1,'Lucy', 9 + ' months', 'cat', '/assets/img/cats/cat2.jpg', 'Lucy is 9 months old, playful, Outgoing, curious and active');
   new Pet(2,'Lily', 4 + ' months', 'cat', '/assets/img/cats/cat3.jpg', 'Lily is only 4 months old, super playful and funny, friendly with averyone');
@@ -143,18 +144,40 @@ function generatePetsObjects() {
   new Pet(29, 'Cinna', 6 + ' months', 'other', '/assets/img/others/rabbit2.jpeg', 'Cinna is a cute rabit');
   new Pet(30,'Oreo', 5 +' months', 'other','/assets/img/others/rabbit3.jpeg', 'Oreo is a smart lovely rabiti' );
     
+
+
+  
+
+
 }
 
 
 // initialization
 generatePetsObjects();
 
+// home page donation update //
 
 function updateDonationParagraph() {
   let totalDonationParagraph= document.getElementById ('total-donations');
-  if (localStorage.getItem ('donations')){
-    totalDonationParagraph.textContent = '';
-    totalDonationParagraph.textContent = localStorage.getItem ('updateTotalDonation');
+  if (totalDonationParagraph){
+    if (localStorage.getItem ('donations')){
+      totalDonationParagraph.textContent = '';
+      totalDonationParagraph.textContent = localStorage.getItem ('updateTotalDonation');
+    }
+  }}
+updateDonationParagraph();
+
+// home page pet update //
+function updatePetParagraph() {
+  let adoptionUpdateArray = (getAdoptions ());
+  let AdoptionUpdate = adoptionUpdateArray.length;
+  let newPetsNumber =(totalPetsHelped - AdoptionUpdate);
+  let petNumberElement = document.getElementById ('total-rescued');
+  if (petNumberElement){
+    if (AdoptionUpdate > 0 ){
+      petNumberElement.innerHTML='';
+      petNumberElement.textContent = newPetsNumber;
+    }
   }
 }
-updateDonationParagraph();
+updatePetParagraph();

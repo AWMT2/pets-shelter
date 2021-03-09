@@ -113,11 +113,11 @@ section {
       padding: 10px;
       height: 100%;
       -webkit-filter: brightness(100%);
--webkit-transition: all 1s ease;
--moz-transition: all 1s ease;
--o-transition: all 1s ease;
--ms-transition: all 1s ease;
-transition: all 1s ease;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      transition: all 1s ease;
   }
 
   .nava:hover {
@@ -131,7 +131,7 @@ transition: all 1s ease;
     margin-bottom: 10px;
     font-size: 40px;
     color: var(--primaryColor);
-  /* background: -webkit-linear-gradient(45deg, rgba(37,47,72,1) 11%, rgba(27,188,182,1) 100%); */
+  
   text-shadow: 0px 11px 10px rgba(2, 2, 2, 0.171);
   font-family: 'Indie Flower', cursive;
   
@@ -140,13 +140,17 @@ transition: all 1s ease;
     width: 1100px;
     height: 5px;
     background-color: var(--seconderyColor);
+    margin-bottom: 20px;
+    margin-top: 20px;
     
 }
 
 .intro p {
-    font-size: 29px;
+    font-size: 20px;
     color : var(--seconderyColor);
     text-align: center;
+    font-family: cursive;
+    margin-bottom: 40px;
 }
 
 .statistics {
@@ -240,7 +244,7 @@ section.stories {
     transform: rotateY(180deg);
     padding :10px;
     font-family: 'Indie Flower', cursive;
-    font-size: 18px;
+    font-size: 21px;
   }
   .storyh2 {
     text-align: center;
@@ -326,3 +330,4 @@ footer a {
 .fa-youtube:hover {
     background-color: #e64a41;
 }
+

@@ -38,13 +38,18 @@ if(selectedPet){
   for(let i in adoptionsArray){
     if(adoptionsArray[i].pet.id === selectedPet.id){
       let adoptNowBtn = document.getElementById('adopt_now');
-      adoptNowBtn.setAttribute('disabled', 'disabled');
+      let paragraph = document.createElement('p');
+      paragraph.textContent = 'Already Adopted';
+      paragraph.setAttribute('class' , 'paragraph-adopted');
+      adoptNowBtn.parentNode.appendChild(paragraph);
+      adoptNowBtn.style.display = 'none';
     }
   }
 }
 
 function showForm() {
   formSection.style.display = 'flex';
+  window.scrollTo(0,document.body.scrollHeight);
 }
 
 function renderPet() {
