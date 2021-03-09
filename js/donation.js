@@ -30,117 +30,116 @@ function myFunction() {
 myFunction ();
 // ---------------------------form --------------------------------------------//
 const form = document.getElementById ('userDonationInput');
-const credit = document.getElementById ('credit');
-const bank = document.getElementById ('bank');
+// const credit = document.getElementById ('credit');
+// const bank = document.getElementById ('bank');
 
-const paymentMethodInformation = document.getElementById ('paymentMethodInformation');
+// const paymentMethodInformation = document.getElementById ('paymentMethodInformation');
 
-const renderCredit = function () {
-  paymentMethodInformation.innerHTML = '';
-  const creditElement1Label = document.createElement ('label');
-  creditElement1Label.setAttribute ('for','bankNumber');
-  creditElement1Label.textContent = ('Credit card number');
-  const creditElement1 = document.createElement ('input');
-  creditElement1.setAttribute ('type','number');
-  creditElement1.setAttribute ('id','bankNumber');
-  creditElement1.setAttribute ('name','bankNumber');
+// const renderCredit = function () {
+//   paymentMethodInformation.innerHTML = '';
+//   const creditElement1Label = document.createElement ('label');
+//   creditElement1Label.setAttribute ('for','bankNumber');
+//   creditElement1Label.textContent = ('Credit card number');
+//   const creditElement1 = document.createElement ('input');
+//   creditElement1.setAttribute ('type','number');
+//   creditElement1.setAttribute ('id','bankNumber');
+//   creditElement1.setAttribute ('name','bankNumber');
+//   paymentMethodInformation.appendChild (creditElement1Label);
+//   paymentMethodInformation.appendChild (creditElement1);
 
-  paymentMethodInformation.appendChild (creditElement1Label);
-  paymentMethodInformation.appendChild (creditElement1);
+//   const creditElement2Label = document.createElement ('label');
+//   creditElement2Label.setAttribute ('for','CreditCode');
+//   creditElement2Label.textContent = ('Card Holder');
+//   const creditElement2 = document.createElement ('input');
+//   creditElement2.setAttribute ('type','text');
+//   creditElement2.setAttribute ('id','CreditCode');
+//   creditElement2.setAttribute ('name','CreditCode');
 
-  const creditElement2Label = document.createElement ('label');
-  creditElement2Label.setAttribute ('for','CreditCode');
-  creditElement2Label.textContent = ('Credit card code');
-  const creditElement2 = document.createElement ('input');
-  creditElement2.setAttribute ('type','number');
-  creditElement2.setAttribute ('id','CreditCode');
-  creditElement2.setAttribute ('name','CreditCode');
+//   paymentMethodInformation.appendChild (creditElement2Label);
+//   paymentMethodInformation.appendChild (creditElement2);
 
-  paymentMethodInformation.appendChild (creditElement2Label);
-  paymentMethodInformation.appendChild (creditElement2);
-
-  const creditElement3Label = document.createElement ('label');
-  creditElement3Label.setAttribute ('for','expDate');
-  creditElement3Label.textContent = ('expiration date');
-  const creditElement3 = document.createElement ('input');
-  creditElement3.setAttribute ('type','date');
-  creditElement3.setAttribute ('id','expDate');
-  creditElement3.setAttribute ('name','expDate');
-  paymentMethodInformation.appendChild (creditElement3Label);
-  paymentMethodInformation.appendChild (creditElement3);
-
-
-  const creditElement4Label = document.createElement ('label');
-  creditElement4Label.setAttribute ('for','cvv');
-  creditElement4Label.textContent = ('CVV');
-  const creditElement4 = document.createElement ('input');
-  creditElement4.setAttribute ('type','number');
-  creditElement4.setAttribute ('id','cvv');
-  creditElement4.setAttribute ('name','cvv');
-  paymentMethodInformation.appendChild (creditElement4Label);
-  paymentMethodInformation.appendChild (creditElement4);
-};
-
-const renderBank = function (){
-  paymentMethodInformation.innerHTML = '';
-  const bankElement1Label = document.createElement ('label');
-  bankElement1Label.setAttribute ('for','bankNumber');
-  bankElement1Label.textContent = ('Bank account number');
-  const bankElement1 = document.createElement ('input');
-  bankElement1.setAttribute ('type','number');
-  bankElement1.setAttribute ('id','bankNumber');
-  bankElement1.setAttribute ('name','bankNumber');
-
-  paymentMethodInformation.appendChild (bankElement1Label);
-  paymentMethodInformation.appendChild (bankElement1);
-
-  const bankElement2Label = document.createElement ('label');
-  bankElement2Label.setAttribute ('for','CreditCode');
-  bankElement2Label.textContent = ('bank card code');
-  const bankElement2 = document.createElement ('input');
-  bankElement2.setAttribute ('type','number');
-  bankElement2.setAttribute ('id','CreditCode');
-  bankElement2.setAttribute ('name','CreditCode');
-
-  paymentMethodInformation.appendChild (bankElement2Label);
-  paymentMethodInformation.appendChild (bankElement2);
-
-  const creditElement3Label = document.createElement ('label');
-  creditElement3Label.setAttribute ('for','expDate');
-  creditElement3Label.textContent = ('expiration date');
-  const creditElement3 = document.createElement ('input');
-  creditElement3.setAttribute ('type','date');
-  creditElement3.setAttribute ('id','expDate');
-  creditElement3.setAttribute ('name','expDate');
-  paymentMethodInformation.appendChild (creditElement3Label);
-  paymentMethodInformation.appendChild (creditElement3);
+//   const creditElement3Label = document.createElement ('label');
+//   creditElement3Label.setAttribute ('for','expDate');
+//   creditElement3Label.textContent = ('expiration date');
+//   const creditElement3 = document.createElement ('input');
+//   creditElement3.setAttribute ('type','date');
+//   creditElement3.setAttribute ('id','expDate');
+//   creditElement3.setAttribute ('name','expDate');
+//   paymentMethodInformation.appendChild (creditElement3Label);
+//   paymentMethodInformation.appendChild (creditElement3);
 
 
-  const creditElement4Label = document.createElement ('label');
-  creditElement4Label.setAttribute ('for','cvv');
-  creditElement4Label.textContent = ('CVV');
-  const creditElement4 = document.createElement ('input');
-  creditElement4.setAttribute ('type','number');
-  creditElement4.setAttribute ('id','cvv');
-  creditElement4.setAttribute ('name','cvv');
-  creditElement4.setAttribute ('value', '');
-  paymentMethodInformation.appendChild (creditElement4Label);
-  paymentMethodInformation.appendChild (creditElement4);
-  creditElement4.style.display = 'none';
-  creditElement4Label.style.display = 'none';
+//   const creditElement4Label = document.createElement ('label');
+//   creditElement4Label.setAttribute ('for','cvv');
+//   creditElement4Label.textContent = ('CVV');
+//   const creditElement4 = document.createElement ('input');
+//   creditElement4.setAttribute ('type','number');
+//   creditElement4.setAttribute ('id','cvv');
+//   creditElement4.setAttribute ('name','cvv');
+//   paymentMethodInformation.appendChild (creditElement4Label);
+//   paymentMethodInformation.appendChild (creditElement4);
+// };
 
-};
+// const renderBank = function (){
+//   paymentMethodInformation.innerHTML = '';
+//   const bankElement1Label = document.createElement ('label');
+//   bankElement1Label.setAttribute ('for','bankNumber');
+//   bankElement1Label.textContent = ('Bank account number');
+//   const bankElement1 = document.createElement ('input');
+//   bankElement1.setAttribute ('type','number');
+//   bankElement1.setAttribute ('id','bankNumber');
+//   bankElement1.setAttribute ('name','bankNumber');
 
-credit.addEventListener('click' ,renderCredit);
-bank.addEventListener('click', renderBank );
+//   paymentMethodInformation.appendChild (bankElement1Label);
+//   paymentMethodInformation.appendChild (bankElement1);
+
+//   const bankElement2Label = document.createElement ('label');
+//   bankElement2Label.setAttribute ('for','CreditCode');
+//   bankElement2Label.textContent = ('bank card code');
+//   const bankElement2 = document.createElement ('input');
+//   bankElement2.setAttribute ('type','number');
+//   bankElement2.setAttribute ('id','CreditCode');
+//   bankElement2.setAttribute ('name','CreditCode');
+
+//   paymentMethodInformation.appendChild (bankElement2Label);
+//   paymentMethodInformation.appendChild (bankElement2);
+
+//   const creditElement3Label = document.createElement ('label');
+//   creditElement3Label.setAttribute ('for','expDate');
+//   creditElement3Label.textContent = ('expiration date');
+//   const creditElement3 = document.createElement ('input');
+//   creditElement3.setAttribute ('type','date');
+//   creditElement3.setAttribute ('id','expDate');
+//   creditElement3.setAttribute ('name','expDate');
+//   paymentMethodInformation.appendChild (creditElement3Label);
+//   paymentMethodInformation.appendChild (creditElement3);
 
 
-let messageBox = document.createElement ('input');
-messageBox.setAttribute ('type','text');
-messageBox.setAttribute ('id','messageBox');
-messageBox.setAttribute ('placeholder','share your thoughts , stories or suggestions to us ');
-const messageSection = document.getElementById ('message');
-messageSection.appendChild (messageBox);
+//   const creditElement4Label = document.createElement ('label');
+//   creditElement4Label.setAttribute ('for','cvv');
+//   creditElement4Label.textContent = ('CVV');
+//   const creditElement4 = document.createElement ('input');
+//   creditElement4.setAttribute ('type','number');
+//   creditElement4.setAttribute ('id','cvv');
+//   creditElement4.setAttribute ('name','cvv');
+//   creditElement4.setAttribute ('value', '');
+//   paymentMethodInformation.appendChild (creditElement4Label);
+//   paymentMethodInformation.appendChild (creditElement4);
+//   creditElement4.style.display = 'none';
+//   creditElement4Label.style.display = 'none';
+
+// };
+
+// credit.addEventListener('click' ,renderCredit);
+// bank.addEventListener('click', renderBank );
+
+
+// let messageBox = document.createElement ('input');
+// messageBox.setAttribute ('type','text');
+// messageBox.setAttribute ('id','messageBox');
+// messageBox.setAttribute ('placeholder','share your thoughts , stories or suggestions to us ');
+// const messageSection = document.getElementById ('message');
+// messageSection.appendChild (messageBox);
 
 
 
@@ -193,6 +192,22 @@ function totalDonations() {
 }
 totalDonations ();
 
+let modal2 = document.querySelector('.modal2');
+
+let closeButton2 = document.querySelector('.close-button2');
+function toggleModal2() {
+  modal2.classList.toggle('show-modal2');
+}
+
+function windowOnClick2(event) {
+  if (event.target === modal2) {
+    toggleModal2();
+  }
+}
+
+
+
+
 form.addEventListener('submit', function(event) {
   event.preventDefault();
   const donorName = event.target.donorName.value;
@@ -208,6 +223,8 @@ form.addEventListener('submit', function(event) {
 
   let saveDon = new Donation (donorName,emailAddress,phoneNumber,otherAmount,bankNumber,expDate,cvv,messageBox);
 
+
+
   donationDataArray.push (saveDon);
   saveDonations (donationDataArray);
 
@@ -217,14 +234,15 @@ form.addEventListener('submit', function(event) {
   console.log (totalDonation);
   localStorage.setItem ('updateTotalDonation', totalDonation);
 
-
-
-
- 
-
-
-
+  form.reset ();
   return totalDonationsAmount, totalDonation , otherAmount;
+
+
+
+
+
+
+
 });
 addDonation();
 function addDonation() {
@@ -235,6 +253,8 @@ function addDonation() {
 
   }
 }
-
+form.addEventListener('submit', toggleModal2);
+closeButton2.addEventListener('click', toggleModal2);
+window.addEventListener('click', windowOnClick2);
 console.log (totalDonationsAmount);
 
