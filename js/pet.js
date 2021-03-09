@@ -1,11 +1,15 @@
 'use strict';
 let modal = document.querySelector('.modal');
 let closeButton = document.querySelector('.close-button');
+let adoptionsArray = getAdoptions() || [];
 
 function toggleModal() {
-  localStorage.removeItem('selectedPet');
   if(modal.classList.length > 1){
-    window.location.href = 'list.html';
+    let submitBtnEl = document.getElementById('submitBtn');
+    let adoptBtn = document.getElementById('adopt_now');
+    submitBtnEl.setAttribute('disabled', 'disabled');
+    adoptBtn.setAttribute('disabled', 'disabled');
+    formSection.style.display = 'none';
   }
   modal.classList.toggle('show-modal');
 }
@@ -21,9 +25,7 @@ window.addEventListener('click', windowOnClick);
 
 let adoptions = getAdoptions() || [];
 
-const formSection = document.getElementsByClassName('form_section')[0];
-formSection.style.display = 'none';
-
+let formSection = document.getElementsByClassName('form_section')[0];
 const formEl = document.getElementById('adopting');
 formEl.addEventListener('submit', handleSubmit);
 
@@ -33,6 +35,12 @@ adoptButtonEl.addEventListener('click', showForm);
 let selectedPet = localStorage.getItem('selectedPet');
 if(selectedPet){
   selectedPet = JSON.parse(selectedPet)[0];
+  for(let i in adoptionsArray){
+    if(adoptionsArray[i].pet.id === selectedPet.id){
+      let adoptNowBtn = document.getElementById('adopt_now');
+      adoptNowBtn.setAttribute('disabled', 'disabled');
+    }
+  }
 }
 
 function showForm() {
@@ -61,7 +69,6 @@ function handleSubmit(event) {
   toggleModal();
 }
 
-console.log(selectedPet)
 if(selectedPet){
   renderPet();
 } else {
