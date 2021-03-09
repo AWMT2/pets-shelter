@@ -12,7 +12,7 @@ function handleClick(event) {
     localStorage.setItem( 'selectedPet', JSON.stringify(object));
 
   }
-  window.location.href = '/pet.html' ;
+  window.location.href = './pet.html' ;
 }
 
 
