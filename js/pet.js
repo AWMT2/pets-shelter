@@ -45,6 +45,7 @@ if(selectedPet){
 
 function showForm() {
   formSection.style.display = 'flex';
+  window.scrollTo(0,document.body.scrollHeight);
 }
 
 function renderPet() {
