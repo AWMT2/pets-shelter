@@ -18,7 +18,7 @@ trigger.addEventListener('click', toggleModal);
 closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowOnClick);
 
-///////////////////////////////////////////////////////////////////////////////
+//--------------------------------Video replay-----------------------------------------//
 let video = document.getElementById('myVideo');
 function myFunction() {
   if (video.paused) {
@@ -216,6 +216,14 @@ form.addEventListener('submit', function(event) {
   totalDonation = totalDonation+ parseInt(otherAmount);
   console.log (totalDonation);
   localStorage.setItem ('updateTotalDonation', totalDonation);
+
+
+
+
+ 
+
+
+
   return totalDonationsAmount, totalDonation , otherAmount;
 });
 addDonation();
@@ -229,3 +237,4 @@ function addDonation() {
 }
 
 console.log (totalDonationsAmount);
+

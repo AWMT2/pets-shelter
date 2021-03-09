@@ -123,7 +123,7 @@ function generatePetsObjects() {
   new Pet(9,'Ella', 6 + ' months', 'cat', '/assets/img/cats/cat9.jpg','Ella is a mix of Ragdol mom and Munchkin dad, most beautiful cat that you will ever meet');
   new Pet(10,'Bo', 1+ + ' year', 'dog','/assets/img/dogs/dog1.jpg','bo is a little  cute dog, yet he is so intelligent');
   new Pet(11, 'Hank',7 + ' years','dog', '/assets/img/dogs/dog2.jpg','Hank is an old loyal dog, just feed him and he will be super loyal ' );
-  new Pet(12, 'Rex', 2 + ' years','dog', '/assets/img/dogs/dog3.jpg', 'Rix is bloody intelligent, fast and loyal' )
+  new Pet(12, 'Rex', 2 + ' years','dog', '/assets/img/dogs/dog3.jpg', 'Rix is bloody intelligent, fast and loyal' );
   new Pet(13, 'Rudy', 4 + ' years', 'dog', '/assets/img/dogs/dog4.jpg', 'Rudy is noisy sometimes but she is loyal and lovely, friendly with childeren');
   new Pet(14,'Max', 1 + ' year', 'dog', '/assets/img/dogs/dog5.jpg', 'Max is super fast, a good fried, and playful');
   new Pet(15, 'Oliver', 3 + ' years', 'dog','/assets/img/dogs/dog6.jpg', 'Oliver is brave, smart and fast');
@@ -142,6 +142,7 @@ function generatePetsObjects() {
   new Pet(28, 'Bugz', 4 +' months', 'other','/assets/img/others/rabbit1.jpeg', 'Bugs is 4 months rabbit');
   new Pet(29, 'Cinna', 6 + ' months', 'other', '/assets/img/others/rabbit2.jpeg', 'Cinna is a cute rabit');
   new Pet(30,'Oreo', 5 +' months', 'other','/assets/img/others/rabbit3.jpeg', 'Oreo is a smart lovely rabiti' );
+
 }
 
 
@@ -151,6 +152,7 @@ generatePetsObjects();
 
 function updateDonationParagraph() {
   let totalDonationParagraph= document.getElementById ('total-donations');
+
   if (localStorage.getItem ('donations')){
     totalDonationParagraph.textContent = '';
     totalDonationParagraph.textContent = localStorage.getItem ('updateTotalDonation');
@@ -160,7 +162,7 @@ updateDonationParagraph();
 
 // home page pet update //
 let adoptionUpdateArray = (getAdoptions ());
-console.log (adoptionUpdateArray);
+
 let AdoptionUpdate = adoptionUpdateArray.length;
 let newPetsNumber =(totalPetsHelped - AdoptionUpdate);
 let petNumberElement = document.getElementById ('total-rescued');
