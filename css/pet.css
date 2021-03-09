@@ -29,7 +29,6 @@ header {
     background-color: var(--seconderyColor) ;
 }
 
-header div {
 .logo_container {
     display: flex;
     align-items: center;
