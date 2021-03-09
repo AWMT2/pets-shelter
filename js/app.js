@@ -13,7 +13,7 @@ function carousel() {
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1;}
     x[slideIndex-1].style.display = 'block';
-    setTimeout(carousel, 2000);
+    setTimeout(carousel, 2500);
   }
 }
 
@@ -64,6 +64,10 @@ function saveAdoptions (adoptionsArray) {
   localStorage.setItem('adoptions', JSON.stringify(adoptionsArray));
 }
 
+function getAdoptions () {
+  return JSON.parse(localStorage.getItem('adoptions'));
+}
+
 
 // Donation constructor
 
@@ -110,7 +114,7 @@ function generatePetsObjects() {
   new Pet(0,'Bella', 1 +' year','cat', '/assets/img/cats/cat1.jpg','Bella is one year old cat,dominant, good rat hunter and super lovely when she is hungry');
   new Pet(1,'Lucy', 9 + ' months', 'cat', '/assets/img/cats/cat2.jpg', 'Lucy is 9 months old, playful, Outgoing, curious and active');
   new Pet(2,'Lily', 4 + ' months', 'cat', '/assets/img/cats/cat3.jpg', 'Lily is only 4 months old, super playful and funny, friendly with averyone');
-  new Pet(3, 'Spank', 2 + 'months', 'cat', '/assets/img/cats/cat4.jpg', 'Spank has been found abandoned in the street, he just started to eat and he uses the litterbox');
+  new Pet(3, 'Spank', 2 + ' months', 'cat', '/assets/img/cats/cat4.jpg', 'Spank has been found abandoned in the street, he just started to eat and he uses the litterbox');
   new Pet(4,'Tidy', 5 + ' months','cat', '/assets/img/cats/cat5.jpg', 'Tidy is 5 months old, super moody, yet so funny');
   new Pet(5, 'Lola', 3 + ' years', 'cat','/assets/img/cats/cat6.jpg','Lola is 3 years old, super whie, super clean, and attention seeker.' );
   new Pet(6, 'Walter', 4 + ' years','cat','/assets/img/cats/cat7.jpg','Walter is 4 years old, lazy; loves to eat and sleep' );
@@ -119,7 +123,7 @@ function generatePetsObjects() {
   new Pet(9,'Ella', 6 + ' months', 'cat', '/assets/img/cats/cat10.jpg','Ella is a mix of Ragdol mom and Munchkin dad, most beautiful cat that you will ever meet');
   new Pet(10,'Bo', 1+ + ' year', 'dog','/assets/img/dogs/dog1.jpg','bo is a little  cute dog, yet he is so intelligent');
   new Pet(11, 'Hank',7 + ' years','dog', '/assets/img/dogs/dog2.jpg','Hank is an old loyal dog, just feed him and he will be super loyal ' );
-  new Pet(12, 'Rex', 2 + ' years','dog', '/assets/img/dogs/dog3.jpg', 'Rix is bloody intelligent, fast and loyal' )
+  new Pet(12, 'Rex', 2 + ' years','dog', '/assets/img/dogs/dog3.jpg', 'Rix is bloody intelligent, fast and loyal' );
   new Pet(13, 'Rudy', 4 + ' years', 'dog', '/assets/img/dogs/dog4.jpg', 'Rudy is noisy sometimes but she is loyal and lovely, friendly with childeren');
   new Pet(14,'Max', 1 + ' year', 'dog', '/assets/img/dogs/dog5.jpg', 'Max is super fast, a good fried, and playful');
   new Pet(15, 'Oliver', 3 + ' years', 'dog','/assets/img/dogs/dog6.jpg', 'Oliver is brave, smart and fast');
@@ -138,7 +142,7 @@ function generatePetsObjects() {
   new Pet(28, 'Bugz', 4 +' months', 'other','/assets/img/others/rabbit1.jpeg', 'Bugs is 4 months rabbit');
   new Pet(29, 'Cinna', 6 + ' months', 'other', '/assets/img/others/rabbit2.jpeg', 'Cinna is a cute rabit');
   new Pet(30,'Oreo', 5 +' months', 'other','/assets/img/others/rabbit3.jpeg', 'Oreo is a smart lovely rabiti' );
-    
+
 }
 
 
@@ -148,9 +152,21 @@ generatePetsObjects();
 
 function updateDonationParagraph() {
   let totalDonationParagraph= document.getElementById ('total-donations');
+
   if (localStorage.getItem ('donations')){
     totalDonationParagraph.textContent = '';
     totalDonationParagraph.textContent = localStorage.getItem ('updateTotalDonation');
   }
 }
 updateDonationParagraph();
+
+// home page pet update //
+let adoptionUpdateArray = (getAdoptions ());
+
+let AdoptionUpdate = adoptionUpdateArray.length;
+let newPetsNumber =(totalPetsHelped - AdoptionUpdate);
+let petNumberElement = document.getElementById ('total-rescued');
+if (AdoptionUpdate > 0 ){
+  petNumberElement.innerHTML='';
+  petNumberElement.textContent = newPetsNumber;
+}

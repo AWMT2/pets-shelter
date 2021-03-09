@@ -1,3 +1,4 @@
+'use strict';
 let reservations = getBooks() || [];
 
 const formElement = document.getElementById('hotel-form');
@@ -5,6 +6,10 @@ const formElement = document.getElementById('hotel-form');
 formElement.addEventListener('submit', handleSubmit);
 const tableContentElement = document.getElementById('reservation-table');
 tableContentElement.addEventListener('click', handleClick);
+
+const dateControl = document.querySelector('input[type="date"]');
+dateControl.value = new Date().toISOString().slice(0, 10);
+dateControl.min = new Date().toISOString().slice(0, 10);
 
 function handleClick(event) {
   let targetElement = event.target;
@@ -29,6 +34,7 @@ function handleSubmit(event) {
   saveBooks(reservations);
   renderTable();
   formEl.reset();
+  window.scrollTo(0,document.body.scrollHeight);
 }
 
 function renderTable() {
@@ -45,7 +51,7 @@ function renderTable() {
             <td>${reservations[i].date}</td>
             <td>${reservations[i].petType}</td>
         `;
-      if(new Date(reservations[i].date) > new Date()){
+      if(new Date(reservations[i].date) >= new Date(new Date().toISOString().slice(0, 10))){
         innerCode += `<td><a id="${i}" class="cancel">Cancel</a></td></tr>`;
       } else {
         innerCode += '<td>-----------</td></tr>';

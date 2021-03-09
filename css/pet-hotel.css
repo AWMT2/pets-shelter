@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dosis:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@500&family=Dosis:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@500&family=Dosis:wght@400;700&family=Kavivanar&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
 
 :root {
     --primaryColor : #1BBCB6;
@@ -10,8 +11,19 @@
     --treetycolor : #A9C3B8;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
 * {
     box-sizing: border-box;
+}
+
+h1, h2 {
+    color: var(--primaryColor);
+}
+p, label {
+    font-family: 'open sans',akaya Telivigala;
 }
 
 body {
@@ -20,6 +32,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -27,8 +42,18 @@ header {
     background-color: var(--seconderyColor) ;
 }
 
-header div {
-    width: 960px;
+.logo_container {
+    display: flex;
+    align-items: center;
+}
+
+.logotext {
+    font-family: 'Amarante', cursive;
+    font-size: 30px;
+    color: white;
+}
+header .header_container {
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -45,12 +70,30 @@ header nav ul {
 
 }
 header nav ul li {
-    margin-left: 15px; 
+    margin-left: 15px;
+    text-decoration: none; 
     
 }
 header img {
     width: 100px;
     height: 50px;
+}
+.nava {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    height: 100%;
+    -webkit-filter: brightness(100%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.nava:hover {
+  color: var(--primaryColor);
+
 }
 
 main {
@@ -58,16 +101,35 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex: 1;
 }
 section {
     margin: 10px 0; 
-    width: 960px;
+    width: 100%;
+}
+
+.hotel-main-image {
+    margin-top: 0 ;
+    position: relative;
+}
+
+.hotel-main-image h1 {
+    position: absolute;
+    color: #468820;
+    font-family: 'Akaya Telivigala';
+    font-weight: 900;
+    font-size: 80px;
+    top: 150px;
+    left: 50px;
+    text-shadow: 3px 2px 5px rgb(206, 245, 135);
 }
 
 section.hotel-main-image img {
-    width: 960px;
-    height: 560px;
+    width: 100%;
+    height: 480px;
     display: none;
+    object-fit: cover;
+    filter: brightness(0.8);
 }
 
 section.hotel-main-image img:first-child {
@@ -81,26 +143,71 @@ section.about-hotel {
     padding: 0 15px;
 }
 
+section.about-hotel p {
+    font-family: 'open sans',akaya Telivigala;
+    font-size: 20px;
+    width: 80%;
+}
+
 section.about-hotel h1 {
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 15px;
 }
 
+.splitter {
+    border-top: 1px solid var(--treetycolor);
+    display: flex;
+    justify-content: center;
+}
+
+.splitter_container {
+    padding-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.splitter_card {
+    width: 500px;
+    display: flex;
+}
+
+.splitter_card img {
+    height: 150px;
+    margin-right: 20px;
+}
+
+.splitter_card h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.splitter_card p {
+    font-size: 17px;
+}
+
+.hotel-form {
+    margin: 20px;
+}
+
 .hotel-form .form-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     border-radius: 10px;
-    background-color: var(--treetycolor);
+    background-color: rgb(211, 208, 208);
     padding: 20px;
+    -webkit-box-shadow: -6px 9px 15px -4px #000000; 
+    box-shadow: -6px 9px 15px -4px #000000;
 }
 
 .hotel-form .form-container h2 {
     font-size: 25px;
     font-weight: 800;
     margin-bottom: 15px;
+    color: #0778a5;
 }
 
 .hotel-form form {
@@ -118,7 +225,7 @@ section.about-hotel h1 {
 
 .hotel-form .input-container .input-label {
     margin-bottom: 7px;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .hotel-form .input-container input {
@@ -142,19 +249,37 @@ section.about-hotel h1 {
     width: 200px;
     height: 35px;
     border-radius: 5px;
+    background-color: rgb(153, 135, 126);
+    color: white;
+    font-weight: 900;
+}
+
+.hotel-form input[type="submit"]:hover {
+    background-color: rgb(112, 99, 93);
+    font-weight: 500;
 }
 
 section.reservation-list {
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.reservation_container {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    background-color: rgb(211, 208, 208);
     padding: 20px;
-    background-color: rgb(82, 236, 146);
+    border-radius: 10px;
+    -webkit-box-shadow: -6px 9px 15px -4px #000000; 
+    box-shadow: -6px 9px 15px -4px #000000;
 }
 
 
 section.reservation-list h2 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 800;
     margin-bottom: 15px;
+    color:  #0778a5;
 }
 
 section.reservation-list table {
@@ -166,7 +291,7 @@ section.reservation-list table th {
     padding: 8px;
     text-align: left;
     font-weight: 700;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #ddd;
   }
 
 section.reservation-list table td {
@@ -185,11 +310,12 @@ section.reservation-list table tr:nth-child(2) td {
 
 footer {
     width: 100%;
+    margin-top: 20px;
     background-color: var(--seconderyColor);
  }
 
 footer .footer-container {
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

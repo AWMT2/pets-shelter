@@ -18,8 +18,16 @@ trigger.addEventListener('click', toggleModal);
 closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowOnClick);
 
-///////////////////////////////////////////////////////////////////////////////
-
+//--------------------------------Video replay-----------------------------------------//
+let video = document.getElementById('myVideo');
+function myFunction() {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
+myFunction ();
 // ---------------------------form --------------------------------------------//
 const form = document.getElementById ('userDonationInput');
 const credit = document.getElementById ('credit');
@@ -127,18 +135,14 @@ credit.addEventListener('click' ,renderCredit);
 bank.addEventListener('click', renderBank );
 
 
-const leaveMessage = document.getElementById ('leavemessage');
+let messageBox = document.createElement ('input');
+messageBox.setAttribute ('type','text');
+messageBox.setAttribute ('id','messageBox');
+messageBox.setAttribute ('placeholder','share your thoughts , stories or suggestions to us ');
+const messageSection = document.getElementById ('message');
+messageSection.appendChild (messageBox);
 
-///////////////////////////////////////////////////////////////////////////////
-leaveMessage.addEventListener('click', function(event) {
-  event.preventDefault ();
-  let messageBox = document.createElement ('input');
-  messageBox.setAttribute ('type','text');
-  messageBox.setAttribute ('id','messageBox');
-  messageBox.setAttribute ('placeholder','share your thoughts , stories or suggestions to us ');
-  const messageSection = document.getElementById ('message');
-  messageSection.appendChild (messageBox);
-});
+
 
 
 //-----------------------------constructor------------------------------------//
@@ -176,9 +180,6 @@ console.log (otherAmount);
 
 
 let donationDataArray = getDonations () || [];
-// let bankNumber = document.getElementById ('bankNumber');
-// let expDate = document.getElementById ('expDate');
-// let cvv = document.getElementById ('cvv');
 let totalDonationsAmount = 0;
 let donationAmount;
 function totalDonations() {
@@ -215,6 +216,14 @@ form.addEventListener('submit', function(event) {
   totalDonation = totalDonation+ parseInt(otherAmount);
   console.log (totalDonation);
   localStorage.setItem ('updateTotalDonation', totalDonation);
+
+
+
+
+ 
+
+
+
   return totalDonationsAmount, totalDonation , otherAmount;
 });
 addDonation();
@@ -228,3 +237,4 @@ function addDonation() {
 }
 
 console.log (totalDonationsAmount);
+

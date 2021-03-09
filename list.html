@@ -8,40 +8,52 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="css/pets-list.css">
 
-    <title>Document</title>
+    <title>Pets shelter</title>
 </head>
-
 <body>
     <header>
+
         <div>
-            <img src="https://via.placeholder.com/100x50?text=LOGO" alt="logo">
+            
+
+        <div class="header_container">
+            <div class="logo_container">
+                <img src="/assets/img/logo.svg" alt="logo">
+                <div class="logotext">Pets-shelter</div>
+            </div>
+
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>Adoption</li>
-                    <li>Pet Hotel</li>
-                    <li>Donation</li>
-                    <li>About us</li>
+                    <li><a href="index.html" class="nava">Home</a></li>
+                    <li><a href="list.html" class="nava">Adoption</a> </li>
+                    <li><a href="pet-hotel.html" class="nava">Pet Hotel</a> </li>
+                    <li><a href="donation.html" class="nava">Donation</a> </li>
+                    <li><a href="aboutus.html" class="nava">About us</a> </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main>
+    <main> 
+        <section >
+
+        
         <form id="filter">
             <fieldset>
-                <label for="name">Name:</label>
-                <input type="text" name="fName" id="fName"><br>
+                
                 <label for="cars">Choose a pet type:</label>
                 <select id="petsType" name="petsType">
                     <option value="cat"> Cats </option>
                     <option value="dog"> Dogs </option>
-                    <option value="other">Others</option> <br>
-                </select><br>
-                <input type="submit" value="Submit"/>
+                    <option value="other">Others</option> 
+                </select> 
+                <button class="submit">Filter Now<i class="icons"></i></button>
 
             </fieldset>
         </form>
+    </section>
         <section id="cardsContainer">
+            
+    
           
         </section>
 

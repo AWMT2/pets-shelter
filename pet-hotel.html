@@ -10,28 +10,49 @@
 </head>
 <body>
     <header>
-        <div>
-            <img src="https://via.placeholder.com/100x50?text=LOGO" alt="logo">
+        <div class="header_container">
+            <div class="logo_container">
+                <img src="/assets/img/logo.svg" alt="logo">
+                <div class="logotext">Pets-shelter</div>
+            </div>
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>Adoption</li>
-                    <li>Pet Hotel</li>
-                    <li>Donation</li>
-                    <li>About us</li>
+                    <li><a href="index.html" class="nava">Home</a></li>
+                    <li><a href="list.html" class="nava">Adoption</a> </li>
+                    <li><a href="pet-hotel.html" class="nava">Pet Hotel</a> </li>
+                    <li><a href="donation.html" class="nava">Donation</a> </li>
+                    <li><a href="aboutus.html" class="nava">About us</a> </li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <section class="hotel-main-image">
-            <img class="imageSlider" src="https://via.placeholder.com/960x560?text=SLIDER" alt="slider">
-            <img class="imageSlider" src="https://via.placeholder.com/960x560?text=SLIDER2" alt="slider">
-            <img class="imageSlider" src="https://via.placeholder.com/960x560?text=SLIDER3" alt="slider">
+            <img src="/assets/img/hotel-main-image.jpeg" alt="slider">
+            <!-- <h1>Pet's Hotel</h1> -->
         </section>
         <section class="about-hotel">
             <h1>Pet's Hotel</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere alias, dignissimos dolores porro suscipit fugit molestiae sequi et culpa, asperiores voluptatum, magnam necessitatibus repellat ad vitae maiores. Placeat doloremque debitis porro qui eius deleniti sit amet veritatis sunt, provident, quia sapiente, magnam a itaque? Architecto libero, in sit itaque placeat accusantium quod hic. Odit dolore ducimus soluta consequuntur id dicta ad sequi enim, perferendis officiis repellendus ipsa, vitae nesciunt. Quos omnis expedita quibusdam quisquam modi nihil laudantium beatae numquam officiis quod tenetur sint, magnam veniam commodi, aliquam ratione accusantium saepe, provident consequatur quas eos? Quibusdam mollitia non sint neque delectus?</p>
+            <p>The Pets Hotel is custom designed for your pet’s health, safety and comfort, all in a fun-filled environment - which exceeds the industry Code of Practice.The Pets Hotel is the leader of the pet care pack. The unique concept of providing the best possible services, and luxury appointments, all under one roof, has not only created a fabulous lifestyle for Melbourne’s cats and dogs but also for their owners. The Pets Hotel provides all pet owners with a boarding and pet minding alternative at a reasonable price.</p>
+        </section>
+        <section class="splitter">
+            <div class="splitter_container">
+                <div class="splitter_card">
+                    <img src="/assets/img/27-24.jpg" alt="">
+                    <div>
+                       <h2>24/7 access</h2>
+                        <p>Hotel is one of just a handful of pet hotels nationwide that offers you 24-hour access to your pet.</p> 
+                    </div>
+                </div>
+                <div class="splitter_card">
+                    <img src="/assets/img/postHoliday.jpg" alt="">
+                    <div>
+                       <h2>year-round pampering</h2>
+                        <p>Give your pet plenty of play and exercise when you drop them off for daycare.</p>
+                    </div>
+                    
+                </div>
+            </div>
         </section>
         <section class="hotel-form">
             <div class="form-container">
@@ -39,11 +60,11 @@
                 <form id="hotel-form" >
                     <div class="input-container">
                         <label for="name" class="input-label">Name</label>
-                        <input id="name" type="text" name="name" required/>
+                        <input placeholder="Your Full Name" id="name" type="text" name="name" required/>
                     </div>
                     <div class="input-container">
                         <label for="phone" class="input-label">Phone Number</label>
-                        <input id="phone" type="tel" maxlength="10" name="phone" required/>
+                        <input placeholder="Enter Ten Number" id="phone" type="tel" pattern="[0-9]{10}" maxlength="10" name="phone" required/>
                     </div>
                     <div class="input-container">
                         <label for="pets-type" class="input-label">Pet's Type</label>
@@ -54,7 +75,7 @@
                         </select>
                     </div>
                     <div class="input-container">
-                        <label for="date" class="input-label">Phone Number</label>
+                        <label for="date" class="input-label">Reservation Date</label>
                         <input id="date" type="date" name="date"  required/>
                     </div>
                     <div class="input-container">
@@ -66,8 +87,11 @@
             </div>
         </section>
         <section class="reservation-list">
-            <h2>Reservations</h2>
-            <table id="reservation-table"></table>
+            <div class="reservation_container">
+                <h2>Reservations</h2>
+                <table id="reservation-table"></table>
+            </div>
+            
         </section>
     </main>
     <footer>
