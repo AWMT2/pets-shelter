@@ -158,3 +158,14 @@ function updateDonationParagraph() {
   }
 }
 updateDonationParagraph();
+
+// home page pet update //
+let adoptionUpdateArray = (getAdoptions ());
+console.log (adoptionUpdateArray);
+let AdoptionUpdate = adoptionUpdateArray.length;
+let newPetsNumber =(totalPetsHelped - AdoptionUpdate);
+let petNumberElement = document.getElementById ('total-rescued');
+if (AdoptionUpdate > 0 ){
+  petNumberElement.innerHTML='';
+  petNumberElement.textContent = newPetsNumber;
+}

@@ -290,7 +290,7 @@ main {
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
-	width: 100%;
+	width: 30%;
 	border: 1px solid #16a085;
 	border-width: 1px 1px 3px;
 	margin-bottom: 10px;
@@ -441,7 +441,7 @@ main {
 }
 
 
-.resetAndSubmit {display: inline;}
+.resetAndSubmit {display: flex;}
 
 
 
