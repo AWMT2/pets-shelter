@@ -34,6 +34,7 @@ function handleSubmit(event) {
   saveBooks(reservations);
   renderTable();
   formEl.reset();
+  window.scrollTo(0,document.body.scrollHeight);
 }
 
 function renderTable() {

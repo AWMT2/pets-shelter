@@ -11,6 +11,10 @@
     --treetycolor : #A9C3B8;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
 * {
     box-sizing: border-box;
 }
