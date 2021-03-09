@@ -111,6 +111,7 @@ function getBooks () {
 
 
 function generatePetsObjects() {
+
   new Pet(0,'Bella', 1 +' year','cat', './assets/img/cats/cat1.jpg','Bella is one year old cat,dominant, good rat hunter and super lovely when she is hungry');
   new Pet(1,'Lucy', 9 + ' months', 'cat', './assets/img/cats/cat2.jpg', 'Lucy is 9 months old, playful, Outgoing, curious and active');
   new Pet(2,'Lily', 4 + ' months', 'cat', './assets/img/cats/cat3.jpg', 'Lily is only 4 months old, super playful and funny, friendly with averyone');
