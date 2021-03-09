@@ -338,7 +338,7 @@ body{
     
     
     .hero-image {
-      background-image: url('/assets/img/AboutUsEllements/cover6.jpg');
+      background-image: url('./assets/img/AboutUsEllements/cover6.jpg');
       background-color: #cccccc;
       height: 350px;
       background-position: right;
