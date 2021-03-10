@@ -257,4 +257,3 @@ form.addEventListener('submit', toggleModal2);
 closeButton2.addEventListener('click', toggleModal2);
 window.addEventListener('click', windowOnClick2);
 console.log (totalDonationsAmount);
-
