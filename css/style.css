@@ -96,6 +96,7 @@ section {
     animation-name: fade;
     margin-top: -10px;
     animation-duration: 1.5s;
+    position: relative;
   }
   
   @-webkit-keyframes fade {
