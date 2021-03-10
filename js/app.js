@@ -116,12 +116,12 @@ function generatePetsObjects() {
   new Pet(2,'Lily', 4 + ' months', 'cat', './assets/img/cats/cat3.jpg', 'Lily is only 4 months old, super playful and funny, friendly with averyone');
   new Pet(3, 'Spank', 2 + ' months', 'cat', './assets/img/cats/cat4.jpg', 'Spank has been found abandoned in the street, he just started to eat and he uses the litterbox');
   new Pet(4,'Tidy', 5 + ' months','cat', './assets/img/cats/cat5.jpg', 'Tidy is 5 months old, super moody, yet so funny');
-  new Pet(5, 'Lola', 3 + ' years', 'cat','./assets/img/cats/cat6.jpg','Lola is 3 years old, super clean, and attention seeker.' );
+  new Pet(5, 'Lola', 3 + ' months', 'cat','./assets/img/cats/cat6.jpg','Lola is 3 years old, super clean, and attention seeker.' );
   new Pet(6, 'Walter', 4 + ' years','cat','./assets/img/cats/cat7.jpg','Walter is 4 years old, lazy; loves to eat and sleep' );
   new Pet(7, 'Flufy', 5+ ' months', 'cat','./assets/img/cats/cat8.jpg', 'Flufy is young acive, funny and playful, loves to hide under covers' );
   new Pet(8, 'Prince', 1 + ' year', 'cat', './assets/img/cats/cat9.jpg','Prince is funny playful, but shy, you won\'t find him easily if there was a strange around' );
   new Pet(9,'Ella', 6 + ' months', 'cat', './assets/img/cats/cat10.jpg','Ella is a mix of Ragdol mom and Munchkin dad, most beautiful cat that you will ever meet');
-  new Pet(10,'Bo', 1+ + ' year', 'dog','./assets/img/dogs/dog1.jpg','bo is a little  cute dog, yet he is so intelligent');
+  new Pet(10,'Bo', 1 + ' year', 'dog','./assets/img/dogs/dog1.jpg','bo is a little  cute dog, yet he is so intelligent');
   new Pet(11, 'Hank',7 + ' years','dog', './assets/img/dogs/dog2.jpg','Hank is an old loyal dog, just feed him and he will be super loyal ' );
   new Pet(12, 'Rex', 2 + ' years','dog', './assets/img/dogs/dog3.jpg', 'Rix is bloody intelligent, fast and loyal' );
   new Pet(13, 'Rudy', 4 + ' years', 'dog', './assets/img/dogs/dog4.jpg', 'Rudy is noisy sometimes but she is loyal and lovely, friendly with childeren');
@@ -148,12 +148,35 @@ function generatePetsObjects() {
 // initialization
 generatePetsObjects();
 
+let totalDonationParagraph= document.getElementById ('total-donations');
 
-function updateDonationParagraph() {
-  let totalDonationParagraph= document.getElementById ('total-donations');
-  if (localStorage.getItem ('donations')){
-    totalDonationParagraph.textContent = '';
-    totalDonationParagraph.textContent = localStorage.getItem ('updateTotalDonation');
+
+// home page pet update //
+function updatePetParagraph() {
+  let adoptionUpdateArray = (getAdoptions ());
+  let AdoptionUpdate = adoptionUpdateArray.length;
+  let newPetsNumber =(totalPetsHelped - AdoptionUpdate);
+  let petNumberElement = document.getElementById ('total-rescued');
+  if (petNumberElement){
+    if (AdoptionUpdate > 0 ){
+      petNumberElement.innerHTML='';
+      petNumberElement.textContent = newPetsNumber;
+    }
   }
 }
-updateDonationParagraph();
+updatePetParagraph();
+
+
+let sum =0 ;
+let donationDataArray2 = (getDonations());
+if (totalDonationParagraph){
+  if (donationDataArray2){
+    for (let v=0;v < donationDataArray2.length ; v++){
+      sum =sum + parseInt( donationDataArray2[v].amount);
+      totalDonationParagraph.textContent ='';
+      totalDonationParagraph.textContent = totalDonation+ sum;
+
+    }
+  }
+}
+console.log (donationDataArray2);
