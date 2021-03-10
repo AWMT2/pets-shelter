@@ -282,7 +282,7 @@ span#age {
      .paragraph-adopted {
          color: var(--primaryColor);
          border: 1px black solid;
-         width: fit-content;
+         width: 180px;
          padding: 10px;
          border-radius: 5px;
          font-weight: 900;

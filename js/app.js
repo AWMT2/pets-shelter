@@ -153,30 +153,23 @@ let totalDonationParagraph= document.getElementById ('total-donations');
 
 // home page pet update //
 function updatePetParagraph() {
-  let adoptionUpdateArray = (getAdoptions ());
+  let adoptionUpdateArray = getAdoptions() || [];
   let AdoptionUpdate = adoptionUpdateArray.length;
-  let newPetsNumber =(totalPetsHelped - AdoptionUpdate);
+  let newPetsNumber =(totalPetsHelped + AdoptionUpdate);
+
   let petNumberElement = document.getElementById ('total-rescued');
   if (petNumberElement){
-    if (AdoptionUpdate > 0 ){
-      petNumberElement.innerHTML='';
-      petNumberElement.textContent = newPetsNumber;
-    }
+    petNumberElement.innerHTML= newPetsNumber;
   }
 }
 updatePetParagraph();
 
 
-let sum =0 ;
-let donationDataArray2 = (getDonations());
+let sum = totalDonation ;
+let donationDataArray2 = getDonations() || [];
 if (totalDonationParagraph){
-  if (donationDataArray2){
-    for (let v=0;v < donationDataArray2.length ; v++){
-      sum =sum + parseInt( donationDataArray2[v].amount);
-      totalDonationParagraph.textContent ='';
-      totalDonationParagraph.textContent = totalDonation+ sum;
-
-    }
+  for (let v in donationDataArray2){
+    sum = sum + Number( donationDataArray2[v].amount);
+    totalDonationParagraph.textContent = sum;
   }
 }
-console.log (donationDataArray2);
