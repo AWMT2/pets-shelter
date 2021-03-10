@@ -223,6 +223,7 @@ main {
 .form-style-5 input[type="search"],
 .form-style-5 input[type="time"],
 .form-style-5 input[type="url"],
+.form-style-5 input[type="password"],
 .form-style-5 input[type="tel"],
 .form-style-5 textarea,
 .form-style-5 select {
@@ -253,6 +254,7 @@ main {
 .form-style-5 input[type="search"]:focus,
 .form-style-5 input[type="time"]:focus,
 .form-style-5 input[type="url"]:focus,
+.form-style-5 input[type="password"]:focus,
 .form-style-5 input[type="tel"]:focus,
 .form-style-5 textarea:focus,
 .form-style-5 select:focus{
